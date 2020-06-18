@@ -13,7 +13,7 @@ import GoogleSignIn
 
 class ClearViewController: UIViewController {
     
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var resubmitFormButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -29,7 +29,7 @@ class ClearViewController: UIViewController {
     }
     
     // Moves backward to questionnaire screen when "Back" button is pressed
-    @IBAction func backtoQuestionnairePressed(_ sender: Any) {
+    @IBAction func resubmitFormPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "ClearToQuestionnaire", sender: self)
     }
     
@@ -37,7 +37,7 @@ class ClearViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        backButton.layer.cornerRadius = 10.0
+        resubmitFormButton.layer.cornerRadius = 10.0
         
         let username = Auth.auth().currentUser?.displayName
 

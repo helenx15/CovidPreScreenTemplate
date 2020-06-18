@@ -14,7 +14,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    @IBOutlet weak var logInMessage: UILabel!
+    @IBOutlet weak var logInLabel: UILabel!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var resetPasswordButton: UIButton!
@@ -24,15 +24,15 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let password = passwordInput.text!
         
         if (email == nil || password == nil || email == "" || password == "") {
-            logInMessage.text = "Please fill out all entries."
-            logInMessage.isHidden = false
+            self.logInLabel.text = "Please fill out all entries."
+            self.logInLabel.isHidden = false
         } else {
-            logInMessage.text = "Logging you in..."
-            logInMessage.isHidden = false
+            self.logInLabel.text = "Logging you in..."
+            self.logInLabel.isHidden = false
             
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if (error != nil) {
-                    self.logInMessage.text = "Invalid email and password credentials. Try again, or:"
+                    self.logInLabel.text = "Invalid email and password credentials. Try again, or:"
                     self.resetPasswordButton.isHidden = false
                     self.signUpButton.isHidden = false
                 }
@@ -41,20 +41,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                         // If user is verified go to prescreen
                         self.performSegue(withIdentifier: "LoggedInSuccess", sender: self)
                     } else {
-                        self.logInMessage.text = "Your email has not been verified. Another email verification email has been sent."
+                        self.logInLabel.text = "Your email has not been verified. Another email verification email has been sent."
                         
                         let firebaseAuth = Auth.auth()
                         Auth.auth().currentUser?.sendEmailVerification { (error) in
                             if (error != nil) {
-                                self.logInMessage.text = "Error: unable to send verification email."
+                                self.logInLabel.text = "Error: unable to send verification email."
                             }
                         }
-//                        do {
-//                            try firebaseAuth.signOut()
-//                        } catch let signOutError as NSError {
-//                            print ("Error signing out: %@", signOutError)
-//                        }
-//                        self.logInMessage.text = "something idk"
                     }
                 }
             }
@@ -69,11 +63,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let email = emailInput.text!
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if (error != nil) {
-                self.logInMessage.text = "No user exists. Please create an account."
+                self.logInLabel.text = "No user exists. Please create an account."
                 self.resetPasswordButton.isHidden = true
             }
             else {
-                self.logInMessage.text = "Password reset email has been sent to " + email + "."
+                self.logInLabel.text = "Password reset email has been sent to " + email + "."
             }
         }
         

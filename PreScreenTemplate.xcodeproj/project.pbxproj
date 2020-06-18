@@ -19,9 +19,7 @@
 		5B28A97B249B47E600418350 /* PreScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28A97A249B47E600418350 /* PreScreenViewController.swift */; };
 		5B28A97D249B488E00418350 /* ClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28A97C249B488E00418350 /* ClearViewController.swift */; };
 		5B28A97F249B489F00418350 /* NotClearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28A97E249B489F00418350 /* NotClearViewController.swift */; };
-		5B28A981249B491700418350 /* ResendVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28A980249B491700418350 /* ResendVerificationViewController.swift */; };
-		5B28A983249B494800418350 /* GoogleSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28A982249B494800418350 /* GoogleSignUpViewController.swift */; };
-		5B28A985249B496C00418350 /* EmailLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28A984249B496C00418350 /* EmailLinkViewController.swift */; };
+		5B71BDFE249B4DC500DF8148 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71BDFD249B4DC500DF8148 /* InfoViewController.swift */; };
 		7F6169E456B163508297B97E /* Pods_PreScreenTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E707FC48BD1157088BC84D4E /* Pods_PreScreenTemplate.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +38,7 @@
 		5B28A97A249B47E600418350 /* PreScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreScreenViewController.swift; sourceTree = "<group>"; };
 		5B28A97C249B488E00418350 /* ClearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearViewController.swift; sourceTree = "<group>"; };
 		5B28A97E249B489F00418350 /* NotClearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotClearViewController.swift; sourceTree = "<group>"; };
-		5B28A980249B491700418350 /* ResendVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendVerificationViewController.swift; sourceTree = "<group>"; };
-		5B28A982249B494800418350 /* GoogleSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignUpViewController.swift; sourceTree = "<group>"; };
-		5B28A984249B496C00418350 /* EmailLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLinkViewController.swift; sourceTree = "<group>"; };
+		5B71BDFD249B4DC500DF8148 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		95CE5B9CB723249CEDD1024B /* Pods-PreScreenTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreScreenTemplate.debug.xcconfig"; path = "Target Support Files/Pods-PreScreenTemplate/Pods-PreScreenTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A58B7541CCCCF90136644E /* Pods-PreScreenTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PreScreenTemplate.release.xcconfig"; path = "Target Support Files/Pods-PreScreenTemplate/Pods-PreScreenTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		E707FC48BD1157088BC84D4E /* Pods_PreScreenTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PreScreenTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,15 +80,13 @@
 				5B28A95E249B31F300418350 /* AppDelegate.swift */,
 				5B28A960249B31F300418350 /* SceneDelegate.swift */,
 				5B28A962249B31F300418350 /* ViewController.swift */,
-				5B28A976249B46A900418350 /* LogInViewController.swift */,
 				5B28A978249B478900418350 /* SignUpViewController.swift */,
+				5B28A976249B46A900418350 /* LogInViewController.swift */,
+				5B71BDFD249B4DC500DF8148 /* InfoViewController.swift */,
 				5B28A97A249B47E600418350 /* PreScreenViewController.swift */,
 				5B28A97C249B488E00418350 /* ClearViewController.swift */,
 				5B28A97E249B489F00418350 /* NotClearViewController.swift */,
 				5B28A964249B31F300418350 /* Main.storyboard */,
-				5B28A980249B491700418350 /* ResendVerificationViewController.swift */,
-				5B28A982249B494800418350 /* GoogleSignUpViewController.swift */,
-				5B28A984249B496C00418350 /* EmailLinkViewController.swift */,
 				5B28A967249B31F500418350 /* Assets.xcassets */,
 				5B28A969249B31F500418350 /* LaunchScreen.storyboard */,
 				5B28A974249B3FEE00418350 /* GoogleService-Info.plist */,
@@ -254,14 +248,12 @@
 			files = (
 				5B28A977249B46A900418350 /* LogInViewController.swift in Sources */,
 				5B28A963249B31F300418350 /* ViewController.swift in Sources */,
-				5B28A981249B491700418350 /* ResendVerificationViewController.swift in Sources */,
 				5B28A95F249B31F300418350 /* AppDelegate.swift in Sources */,
-				5B28A983249B494800418350 /* GoogleSignUpViewController.swift in Sources */,
 				5B28A961249B31F300418350 /* SceneDelegate.swift in Sources */,
 				5B28A97B249B47E600418350 /* PreScreenViewController.swift in Sources */,
 				5B28A979249B478900418350 /* SignUpViewController.swift in Sources */,
 				5B28A97F249B489F00418350 /* NotClearViewController.swift in Sources */,
-				5B28A985249B496C00418350 /* EmailLinkViewController.swift in Sources */,
+				5B71BDFE249B4DC500DF8148 /* InfoViewController.swift in Sources */,
 				5B28A97D249B488E00418350 /* ClearViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,15 +13,16 @@ import GoogleSignIn
 
 class PreScreenViewController: UIViewController, UITextFieldDelegate {
         
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var viewMyInfoButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var temperatureText: UITextField!
-    @IBOutlet weak var notAllFilledOut: UILabel!
+    @IBOutlet weak var temperatureInput: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var question1Prompt: UILabel!
     @IBOutlet weak var question2Prompt: UILabel!
     @IBOutlet weak var question3Prompt: UILabel!
     @IBOutlet weak var question4Prompt: UILabel!
+    // INSERT ADDITIONAL QUESTIONS HERE
     
     @IBOutlet weak var question1Yes: UIButton!
     @IBOutlet weak var question1No: UIButton!
@@ -31,6 +32,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var question3No: UIButton!
     @IBOutlet weak var question4Yes: UIButton!
     @IBOutlet weak var question4No: UIButton!
+    // INSERT ADDITIONAL QUESTIONS HERE
     
     var ref: DatabaseReference!
     
@@ -126,6 +128,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                }
     }
     
+    // INSERT ADDITIONAL QUESTIONS HERE
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Creates save default so app can save all information from questionnaire
@@ -133,8 +137,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
         
         // Info for Clear Screen
         if segue.identifier == "ClearSegue" {
-            if (temperatureText.text! != "") {
-                savedDefaults.set(temperatureText.text!, forKey: "TempEntered")
+            if (temperatureInput.text! != "") {
+                savedDefaults.set(temperatureInput.text!, forKey: "TempEntered")
             }
             savedDefaults.set(true, forKey: "FormSubmittedClear")
         }
@@ -157,8 +161,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             {
                 savedDefaults.set(question4Prompt.text!, forKey: "Q4Yes")
             }
-            if (temperatureText.text! != "") {
-                savedDefaults.set(temperatureText.text! + " °F", forKey: "TempEntered")
+            if (temperatureInput.text! != "") {
+                savedDefaults.set(temperatureInput.text! + " °F", forKey: "TempEntered")
             }
             savedDefaults.set(true, forKey: "FormSubmittedNotClear")
         }
@@ -228,10 +232,10 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             // All questions answered
         
             // Get the temperature
-            let temperatureInt = Double(temperatureText.text!)
+            let temperatureInt = Double(temperatureInput.text!)
             
             // CLEAR: Qs 2-4 No + No fever / Fever < 100.4
-            if ((question2No.isSelected && question3No.isSelected && question4No.isSelected) && ((question1No.isSelected) || (temperatureText.text! != "" && temperatureInt!.isLess(than: 100.4))))
+            if ((question2No.isSelected && question3No.isSelected && question4No.isSelected) && ((question1No.isSelected) || (temperatureInput.text! != "" && temperatureInt!.isLess(than: 100.4))))
             {
                 self.performSegue(withIdentifier: "ClearSegue", sender: self)
             }
@@ -245,7 +249,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
         // Not all quetsions were answered
         else
         {
-            notAllFilledOut.isHidden = false
+            errorLabel.isHidden = false
         }
     }
     
@@ -272,8 +276,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
 
         ref = Database.database().reference()
         
-        temperatureText.delegate = self
-        backButton.layer.cornerRadius = 10.0
+        temperatureInput.delegate = self
+        viewMyInfoButton.layer.cornerRadius = 10.0
         submitButton.layer.cornerRadius = 20.0
     }
 

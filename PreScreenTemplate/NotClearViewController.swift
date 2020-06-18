@@ -13,8 +13,8 @@ import GoogleSignIn
 
 class NotClearViewController: UIViewController {
     
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var questionsAnsweredYes: UILabel!
+    @IBOutlet weak var goBackButton: UIButton!
+    @IBOutlet weak var yesQuestionsLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -25,6 +25,7 @@ class NotClearViewController: UIViewController {
     var question2 = String()
     var question3 = String()
     var question4 = String()
+    // INSERT ADDITIONAL QUESTIONS
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Clear all saved data before going back to questionnaire screen
@@ -46,7 +47,7 @@ class NotClearViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        backButton.layer.cornerRadius = 10.0
+        goBackButton.layer.cornerRadius = 10.0
         
         
         let username = Auth.auth().currentUser?.displayName
@@ -75,23 +76,23 @@ class NotClearViewController: UIViewController {
         
         // Places previously loaded data onto screen
         if (question1 != "") {
-            questionsAnsweredYes.text = "\n" + question1 + "\n"
+            yesQuestionsLabel.text = "\n" + question1 + "\n"
             if ( feverdeg != "") {
                 if feverdeg.count > 5 {
                     feverdeg = String(feverdeg.prefix(5))
                 }
-                questionsAnsweredYes.text = questionsAnsweredYes.text! + "     Reported: " + feverdeg + "\n"
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "     Reported: " + feverdeg + "\n"
             }
         }
         
         if (question2 != "") {
-            questionsAnsweredYes.text = questionsAnsweredYes.text! + "\n" + question2 + "\n"
+            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question2 + "\n"
         }
         if (question3 != "") {
-            questionsAnsweredYes.text = questionsAnsweredYes.text! + "\n" + question3 + "\n"
+            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question3 + "\n"
         }
         if (question4 != "") {
-            questionsAnsweredYes.text = questionsAnsweredYes.text! + "\n" + question4 + "\n"
+            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question4 + "\n"
         }
         
         let timeSubmitted = savedDefaults.value(forKey: "TimeSubmitted")

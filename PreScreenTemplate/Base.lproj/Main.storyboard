@@ -126,17 +126,17 @@
                     <navigationItem key="navigationItem" id="Hzt-Ew-QlC"/>
                     <connections>
                         <outlet property="emailInput" destination="q1x-cS-Pjs" id="SX6-IW-L17"/>
-                        <outlet property="emailSentLabel" destination="cWW-EL-Nun" id="XPB-A6-iqc"/>
                         <outlet property="logInButton" destination="VcD-Jg-zj2" id="Bv2-JA-fou"/>
                         <outlet property="nameInput" destination="BIB-c4-rh6" id="m9F-aq-KF0"/>
                         <outlet property="passwordInput" destination="cgT-83-Xe2" id="nx5-37-XY4"/>
                         <outlet property="signUpButton" destination="zNy-Pg-DoO" id="zNX-3L-gst"/>
+                        <outlet property="signUpLabel" destination="cWW-EL-Nun" id="XC6-Nk-zvw"/>
                         <segue destination="nEQ-17-Qf2" kind="show" identifier="SignUpToLogIn" id="Idc-3X-GkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCR-r1-OgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-154"/>
+            <point key="canvasLocation" x="-355" y="-165"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -234,7 +234,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2U5-ZB-b1S"/>
                     <connections>
-                        <outlet property="enterbutton" destination="400-u7-yxL" id="mk1-6c-bTi"/>
+                        <outlet property="enterButton" destination="400-u7-yxL" id="fvC-q8-eEm"/>
                         <outlet property="logInButton" destination="mCy-Wb-EFV" id="Egt-rX-vBE"/>
                         <outlet property="signUpButton" destination="jae-PI-tJC" id="WFO-Wj-NKS"/>
                         <segue destination="UkE-dm-dQD" kind="showDetail" identifier="EnterToPrescreen" id="f1h-iQ-A81"/>
@@ -246,79 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-264" y="125"/>
-        </scene>
-        <!--Resend Verification View Controller-->
-        <scene sceneID="uym-PY-cJU">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DJv-Hn-k5G" customClass="ResendVerificationViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fZq-v3-ESf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An email has already been sent to: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ks-DM-4kU">
-                                <rect key="frame" x="41.5" y="168" width="331" height="45"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHu-4L-Hm8">
-                                <rect key="frame" x="40" y="347.5" width="334" height="50"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
-                                <state key="normal" title="Re-send Verification">
-                                    <color key="titleColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSa-OY-KBw">
-                                <rect key="frame" x="40" y="516.5" width="334" height="50"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
-                                <state key="normal" title="Create New Account">
-                                    <color key="titleColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or," lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlH-rh-ZFb">
-                                <rect key="frame" x="178.5" y="450.5" width="57" height="31.5"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RdJ-gP-iCD">
-                                <rect key="frame" x="41.5" y="238" width="331" height="44.5"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="3Ks-DM-4kU" firstAttribute="height" secondItem="fZq-v3-ESf" secondAttribute="height" multiplier="0.05" id="4S9-5G-2vP"/>
-                            <constraint firstItem="WlH-rh-ZFb" firstAttribute="top" secondItem="AHu-4L-Hm8" secondAttribute="bottom" constant="53" id="9f5-qD-5UH"/>
-                            <constraint firstItem="RdJ-gP-iCD" firstAttribute="top" secondItem="3Ks-DM-4kU" secondAttribute="bottom" constant="25" id="BiJ-Qr-JDi"/>
-                            <constraint firstItem="wi1-zU-hbR" firstAttribute="trailing" secondItem="AHu-4L-Hm8" secondAttribute="trailing" constant="40" id="IxB-GN-OkL"/>
-                            <constraint firstItem="3Ks-DM-4kU" firstAttribute="centerX" secondItem="fZq-v3-ESf" secondAttribute="centerX" id="JZe-Ri-ylJ"/>
-                            <constraint firstItem="cSa-OY-KBw" firstAttribute="leading" secondItem="wi1-zU-hbR" secondAttribute="leading" constant="40" id="Osn-tr-1jx"/>
-                            <constraint firstItem="cSa-OY-KBw" firstAttribute="top" secondItem="AHu-4L-Hm8" secondAttribute="bottom" constant="119" id="PKl-bc-4uz"/>
-                            <constraint firstItem="wi1-zU-hbR" firstAttribute="trailing" secondItem="cSa-OY-KBw" secondAttribute="trailing" constant="40" id="S8d-l3-VkA"/>
-                            <constraint firstItem="WlH-rh-ZFb" firstAttribute="height" secondItem="fZq-v3-ESf" secondAttribute="height" multiplier="0.0351562" id="c1c-SV-X7f"/>
-                            <constraint firstItem="RdJ-gP-iCD" firstAttribute="height" secondItem="3Ks-DM-4kU" secondAttribute="height" id="dAK-Az-8Ur"/>
-                            <constraint firstItem="WlH-rh-ZFb" firstAttribute="width" secondItem="fZq-v3-ESf" secondAttribute="width" multiplier="0.137681" id="ea0-L5-Tmm"/>
-                            <constraint firstItem="AHu-4L-Hm8" firstAttribute="leading" secondItem="wi1-zU-hbR" secondAttribute="leading" constant="40" id="gAN-Av-SfX"/>
-                            <constraint firstItem="3Ks-DM-4kU" firstAttribute="width" secondItem="fZq-v3-ESf" secondAttribute="width" multiplier="0.8" id="hsE-jv-g2v"/>
-                            <constraint firstItem="AHu-4L-Hm8" firstAttribute="top" secondItem="3Ks-DM-4kU" secondAttribute="bottom" constant="134.5" id="kfl-kU-n0u"/>
-                            <constraint firstItem="RdJ-gP-iCD" firstAttribute="width" secondItem="3Ks-DM-4kU" secondAttribute="width" id="lkL-DS-zpQ"/>
-                            <constraint firstItem="3Ks-DM-4kU" firstAttribute="top" secondItem="wi1-zU-hbR" secondAttribute="top" constant="124" id="mIG-hn-ASv"/>
-                            <constraint firstItem="WlH-rh-ZFb" firstAttribute="centerX" secondItem="fZq-v3-ESf" secondAttribute="centerX" id="q8U-Ul-t4C"/>
-                            <constraint firstItem="AHu-4L-Hm8" firstAttribute="centerX" secondItem="fZq-v3-ESf" secondAttribute="centerX" id="qXK-Ej-NWO"/>
-                            <constraint firstItem="cSa-OY-KBw" firstAttribute="centerX" secondItem="fZq-v3-ESf" secondAttribute="centerX" id="rN8-xi-yyF"/>
-                            <constraint firstItem="RdJ-gP-iCD" firstAttribute="centerX" secondItem="fZq-v3-ESf" secondAttribute="centerX" id="wch-7c-jdR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wi1-zU-hbR"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mQe-Zu-cYw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9xq-dz-PMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-196" y="-842"/>
+            <point key="canvasLocation" x="551" y="125"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Zwn-bo-gPD">
@@ -447,7 +375,7 @@
                     <connections>
                         <outlet property="emailInput" destination="MvJ-6u-HWh" id="STb-HV-gVn"/>
                         <outlet property="logInButton" destination="IMB-hw-RpZ" id="f0F-KN-ulw"/>
-                        <outlet property="logInMessage" destination="r2Q-m7-zQe" id="9Xg-q3-TeP"/>
+                        <outlet property="logInLabel" destination="r2Q-m7-zQe" id="ECH-3I-CHQ"/>
                         <outlet property="passwordInput" destination="UNJ-sz-DBW" id="wqQ-Fm-dmQ"/>
                         <outlet property="resetPasswordButton" destination="8Hl-vM-SKk" id="Abf-SF-cYp"/>
                         <outlet property="signUpButton" destination="oXg-5m-DwZ" id="bi6-l2-5rH"/>
@@ -457,12 +385,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJy-Qv-hWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="516"/>
+            <point key="canvasLocation" x="-355" y="506"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="5EZ-pL-bJ8">
             <objects>
-                <viewController storyboardIdentifier="StudentInfoScreen" modalPresentationStyle="fullScreen" id="DMq-PU-ezD" customClass="SecondViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentInfoScreen" modalPresentationStyle="fullScreen" id="DMq-PU-ezD" customClass="InfoViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P7r-dQ-06L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -568,10 +496,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ued-o9-VgM"/>
                     <connections>
-                        <outlet property="continuebutton" destination="Ke0-Hd-WJB" id="OWa-4B-hfR"/>
-                        <outlet property="emailaddress" destination="Hno-kM-iZC" id="pON-7E-EZT"/>
-                        <outlet property="fullname" destination="pyu-06-I0D" id="uAS-vi-3c4"/>
-                        <outlet property="signoutbutton" destination="p6H-Ha-s3F" id="lnW-EI-Ne6"/>
+                        <outlet property="emailAddressLabel" destination="Hno-kM-iZC" id="5ON-20-P1Z"/>
+                        <outlet property="fullNameLabel" destination="pyu-06-I0D" id="J6w-TQ-dAf"/>
+                        <outlet property="nextButton" destination="Ke0-Hd-WJB" id="vos-bv-6pn"/>
+                        <outlet property="signOutButton" destination="p6H-Ha-s3F" id="Uov-iB-Kp5"/>
                         <segue destination="UkE-dm-dQD" kind="showDetail" identifier="QuestionViewSegue" id="jqx-Bu-Q81"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="signOutToMain" id="Wcd-1t-Klc"/>
                     </connections>
@@ -913,8 +841,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cOF-uE-HeO"/>
                     <connections>
-                        <outlet property="backButton" destination="JpI-jY-zXR" id="fod-ly-4PD"/>
-                        <outlet property="notAllFilledOut" destination="sDC-D5-6Ev" id="4UO-iI-rcO"/>
+                        <outlet property="errorLabel" destination="sDC-D5-6Ev" id="YPP-zC-CW1"/>
                         <outlet property="question1No" destination="DN5-kN-3jG" id="Psh-xM-5pY"/>
                         <outlet property="question1Prompt" destination="4pH-jW-Z50" id="hbs-V6-Jis"/>
                         <outlet property="question1Yes" destination="2rL-ei-ViX" id="l5g-pu-QWw"/>
@@ -928,7 +855,8 @@
                         <outlet property="question4Prompt" destination="ry1-Iy-kOM" id="4kF-EW-Jlk"/>
                         <outlet property="question4Yes" destination="lYc-p1-TG7" id="5ba-qg-Zi9"/>
                         <outlet property="submitButton" destination="btL-yJ-knN" id="VEy-fd-7Rz"/>
-                        <outlet property="temperatureText" destination="xwS-dj-tER" id="qVg-0Z-yoZ"/>
+                        <outlet property="temperatureInput" destination="xwS-dj-tER" id="7gd-Zs-wN4"/>
+                        <outlet property="viewMyInfoButton" destination="JpI-jY-zXR" id="rmQ-Zt-Cvw"/>
                         <segue destination="DMq-PU-ezD" kind="showDetail" identifier="BackToVC2" id="XcV-9x-PR2"/>
                         <segue destination="WHt-mV-ue8" kind="showDetail" identifier="ClearSegue" id="fdI-wq-Gke"/>
                         <segue destination="pEY-nU-uDH" kind="showDetail" identifier="NotClearSegue" id="Dfr-nD-yQq"/>
@@ -937,147 +865,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8K-sU-fXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1442" y="125"/>
-        </scene>
-        <!--Google Sign Up View Controller-->
-        <scene sceneID="lWw-cj-8RW">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="bTg-r1-rVA" customClass="GoogleSignUpViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="swH-OM-mfh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Is0-SK-dmb" customClass="GIDSignInButton">
-                                <rect key="frame" x="87" y="263.5" width="240" height="53.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <connections>
-                                    <action selector="signInTouchUpInside:" destination="bTg-r1-rVA" eventType="touchUpInside" id="Cwy-ee-F4x"/>
-                                    <action selector="signinTap:" destination="bTg-r1-rVA" eventType="valueChanged" id="wqu-8S-xpR"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9N-ea-GQ8">
-                                <rect key="frame" x="53" y="607.5" width="308" height="58"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
-                                <state key="normal" title="Enter">
-                                    <color key="titleColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="enterToPrescreen:" destination="bTg-r1-rVA" eventType="touchUpInside" id="cfy-2F-cvg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign in with your  De La Salle email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBT-0x-cOK">
-                                <rect key="frame" x="41.5" y="144.5" width="331" height="60"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: The email you signed in with is not part of De La Salle High School. Please sign in with a different email." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-Pk-Rf0">
-                                <rect key="frame" x="41.5" y="365" width="331" height="89.5"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your current email:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71d-dw-fQ1">
-                                <rect key="frame" x="41.5" y="476" width="331" height="80.5"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="71d-dw-fQ1" firstAttribute="top" secondItem="Is0-SK-dmb" secondAttribute="bottom" multiplier="1180/800" constant="8" symbolic="YES" id="3Ax-OG-Yk1"/>
-                            <constraint firstItem="OBT-0x-cOK" firstAttribute="width" secondItem="swH-OM-mfh" secondAttribute="width" multiplier="0.8" id="5z9-hr-UeI"/>
-                            <constraint firstItem="4xc-Pk-Rf0" firstAttribute="height" secondItem="swH-OM-mfh" secondAttribute="height" multiplier="0.1" id="97t-uO-GyV"/>
-                            <constraint firstItem="Is0-SK-dmb" firstAttribute="top" secondItem="ccO-DD-Ibr" secondAttribute="bottom" multiplier="250/818" id="EVj-Cv-Hvg"/>
-                            <constraint firstItem="4xc-Pk-Rf0" firstAttribute="top" secondItem="Is0-SK-dmb" secondAttribute="bottom" multiplier="900/800" constant="8" symbolic="YES" id="Erb-H1-Ffg"/>
-                            <constraint firstItem="l9N-ea-GQ8" firstAttribute="centerX" secondItem="swH-OM-mfh" secondAttribute="centerX" id="LbC-5T-Mmb"/>
-                            <constraint firstItem="Is0-SK-dmb" firstAttribute="width" secondItem="swH-OM-mfh" secondAttribute="width" multiplier="0.57971" id="NDK-vC-mBR"/>
-                            <constraint firstItem="4xc-Pk-Rf0" firstAttribute="width" secondItem="OBT-0x-cOK" secondAttribute="width" id="NHI-sa-soj"/>
-                            <constraint firstItem="OBT-0x-cOK" firstAttribute="height" secondItem="swH-OM-mfh" secondAttribute="height" multiplier="0.0669643" id="NrZ-EQ-u1V"/>
-                            <constraint firstItem="4xc-Pk-Rf0" firstAttribute="centerX" secondItem="swH-OM-mfh" secondAttribute="centerX" id="ZD0-cJ-Gk3"/>
-                            <constraint firstItem="Is0-SK-dmb" firstAttribute="top" secondItem="OBT-0x-cOK" secondAttribute="bottom" multiplier="1000/800" constant="8" symbolic="YES" id="ZbA-I9-T2R"/>
-                            <constraint firstItem="71d-dw-fQ1" firstAttribute="centerX" secondItem="swH-OM-mfh" secondAttribute="centerX" id="cC3-tN-ols"/>
-                            <constraint firstItem="Is0-SK-dmb" firstAttribute="height" secondItem="swH-OM-mfh" secondAttribute="height" multiplier="0.06" id="cpb-za-9aE"/>
-                            <constraint firstItem="l9N-ea-GQ8" firstAttribute="top" secondItem="Is0-SK-dmb" secondAttribute="bottom" multiplier="1512/800" constant="8" symbolic="YES" id="hCH-Iv-6MD"/>
-                            <constraint firstItem="71d-dw-fQ1" firstAttribute="height" secondItem="swH-OM-mfh" secondAttribute="height" multiplier="0.09" id="hYB-0b-Qbm"/>
-                            <constraint firstItem="71d-dw-fQ1" firstAttribute="width" secondItem="OBT-0x-cOK" secondAttribute="width" id="ljv-UW-sp1"/>
-                            <constraint firstItem="l9N-ea-GQ8" firstAttribute="height" secondItem="swH-OM-mfh" secondAttribute="height" multiplier="0.0647321" id="qx6-bW-hOJ"/>
-                            <constraint firstItem="Is0-SK-dmb" firstAttribute="centerX" secondItem="swH-OM-mfh" secondAttribute="centerX" id="rVi-er-Roj"/>
-                            <constraint firstItem="OBT-0x-cOK" firstAttribute="centerX" secondItem="swH-OM-mfh" secondAttribute="centerX" id="vPk-rK-sh1"/>
-                            <constraint firstItem="ccO-DD-Ibr" firstAttribute="trailing" secondItem="l9N-ea-GQ8" secondAttribute="trailing" constant="53" id="wAh-WY-ugw"/>
-                            <constraint firstItem="l9N-ea-GQ8" firstAttribute="leading" secondItem="ccO-DD-Ibr" secondAttribute="leading" constant="53" id="wRN-eo-65a"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ccO-DD-Ibr"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="E0m-8Q-gyB"/>
-                    <connections>
-                        <outlet property="currentEmail" destination="71d-dw-fQ1" id="0SW-vP-mAM"/>
-                        <outlet property="emailError" destination="4xc-Pk-Rf0" id="YRG-er-7Na"/>
-                        <outlet property="enterButton" destination="l9N-ea-GQ8" id="e6Q-2a-Ulb"/>
-                        <outlet property="signInButton" destination="Is0-SK-dmb" id="F5b-a4-Z5u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RAk-ye-Vx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="612" y="-842"/>
-        </scene>
-        <!--Email Link View Controller-->
-        <scene sceneID="dlC-HG-k8r">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="eC1-pi-uBa" customClass="EmailLinkViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="x2T-RS-hmn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlE-vI-KcN">
-                                <rect key="frame" x="40" y="182" width="313" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaN-C2-ChA">
-                                <rect key="frame" x="53" y="270" width="308" height="50"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
-                                <state key="normal" title="Send Link">
-                                    <color key="titleColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendLinkTapped:" destination="eC1-pi-uBa" eventType="touchUpInside" id="Y2Z-SN-jUv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szy-P5-oia">
-                                <rect key="frame" x="53" y="375" width="308" height="50"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signInTapped:" destination="eC1-pi-uBa" eventType="touchUpInside" id="ZFD-yG-MNl"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="szy-P5-oia" firstAttribute="top" secondItem="DaN-C2-ChA" secondAttribute="bottom" constant="55" id="KGb-AP-JBh"/>
-                            <constraint firstItem="g04-cG-wnV" firstAttribute="trailing" secondItem="DaN-C2-ChA" secondAttribute="trailing" constant="53" id="Sld-rS-fvX"/>
-                            <constraint firstItem="DaN-C2-ChA" firstAttribute="leading" secondItem="g04-cG-wnV" secondAttribute="leading" constant="53" id="Tri-ra-PLt"/>
-                            <constraint firstItem="wlE-vI-KcN" firstAttribute="top" secondItem="g04-cG-wnV" secondAttribute="top" constant="138" id="Zx0-Eg-y3h"/>
-                            <constraint firstItem="g04-cG-wnV" firstAttribute="trailing" secondItem="wlE-vI-KcN" secondAttribute="trailing" constant="61" id="cep-Ew-78N"/>
-                            <constraint firstItem="wlE-vI-KcN" firstAttribute="leading" secondItem="g04-cG-wnV" secondAttribute="leading" constant="40" id="fFe-7v-Mvm"/>
-                            <constraint firstItem="g04-cG-wnV" firstAttribute="trailing" secondItem="szy-P5-oia" secondAttribute="trailing" constant="53" id="l5J-xV-GoQ"/>
-                            <constraint firstItem="szy-P5-oia" firstAttribute="leading" secondItem="g04-cG-wnV" secondAttribute="leading" constant="53" id="r0G-6u-TlF"/>
-                            <constraint firstItem="DaN-C2-ChA" firstAttribute="top" secondItem="wlE-vI-KcN" secondAttribute="bottom" constant="54" id="yYI-TW-UrC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="g04-cG-wnV"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="smd-p9-6ns"/>
-                    <connections>
-                        <outlet property="emailtextfield" destination="wlE-vI-KcN" id="fV5-QM-lFn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WBS-Fa-7fU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1380" y="-842"/>
         </scene>
         <!--Clear View Controller-->
         <scene sceneID="os9-4n-xnN">
@@ -1098,7 +885,7 @@
                                     <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
                                 </variation>
                                 <connections>
-                                    <action selector="backtoQuestionnairePressed:" destination="WHt-mV-ue8" eventType="touchUpInside" id="1bI-CQ-n4T"/>
+                                    <action selector="resubmitFormPressed:" destination="WHt-mV-ue8" eventType="touchUpInside" id="hIA-rs-Mrt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show this pass when you get to school" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIq-NR-IBQ">
@@ -1182,9 +969,9 @@
                         <viewLayoutGuide key="safeArea" id="o7c-C5-iJc"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="r00-cB-klY" id="ktR-6o-pax"/>
                         <outlet property="dateLabel" destination="kID-iH-OBH" id="SXX-Jl-Y9p"/>
                         <outlet property="nameLabel" destination="7Nw-FP-yI6" id="HlN-ic-39e"/>
+                        <outlet property="resubmitFormButton" destination="r00-cB-klY" id="iQ5-su-imH"/>
                         <outlet property="timeLabel" destination="jUN-2c-sXE" id="HGU-XP-pzC"/>
                         <segue destination="UkE-dm-dQD" kind="showDetail" identifier="ClearToQuestionnaire" id="ZBN-C6-WAg"/>
                     </connections>
@@ -1384,11 +1171,11 @@
                         <viewLayoutGuide key="safeArea" id="eBz-ie-svb"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="OCd-Se-fTU" id="Hck-i7-WcW"/>
                         <outlet property="dateLabel" destination="rjy-Hl-mfK" id="PMq-h9-ug8"/>
+                        <outlet property="goBackButton" destination="OCd-Se-fTU" id="a0a-fx-LZN"/>
                         <outlet property="nameLabel" destination="cCL-EA-iYc" id="d3S-xt-XFc"/>
-                        <outlet property="questionsAnsweredYes" destination="J4R-xF-P1X" id="gb8-WZ-OwG"/>
                         <outlet property="timeLabel" destination="0KM-Um-jmT" id="YPT-xp-V2j"/>
+                        <outlet property="yesQuestionsLabel" destination="J4R-xF-P1X" id="61n-Dq-oou"/>
                         <segue destination="UkE-dm-dQD" kind="showDetail" identifier="NotClearToQuestionnaire" id="cvG-77-wAd"/>
                     </connections>
                 </viewController>
@@ -1400,7 +1187,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Dfr-nD-yQq"/>
         <segue reference="fdI-wq-Gke"/>
-        <segue reference="cvG-77-wAd"/>
+        <segue reference="jqx-Bu-Q81"/>
         <segue reference="Idc-3X-GkN"/>
         <segue reference="dgj-OI-J0b"/>
     </inferredMetricsTieBreakers>
