@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>920436283260-ojvof39336qokkn3a0auea81euvtes5u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.920436283260-ojvof39336qokkn3a0auea81euvtes5u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBQ0Xi7VFnw_Hn5H06C6T4f_e76hWtRKos</string>
+	<key>GCM_SENDER_ID</key>
+	<string>920436283260</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.helenxiao.PreScreenTemplate</string>
+	<key>PROJECT_ID</key>
+	<string>prescreentemplate</string>
+	<key>STORAGE_BUCKET</key>
+	<string>prescreentemplate.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:920436283260:ios:dccd74e5aee7d4f204b6f9</string>
+	<key>DATABASE_URL</key>
+	<string>https://prescreentemplate.firebaseio.com</string>
+</dict>
+</plist>
