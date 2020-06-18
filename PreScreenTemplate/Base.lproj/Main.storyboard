@@ -237,16 +237,16 @@
                         <outlet property="enterButton" destination="400-u7-yxL" id="fvC-q8-eEm"/>
                         <outlet property="logInButton" destination="mCy-Wb-EFV" id="Egt-rX-vBE"/>
                         <outlet property="signUpButton" destination="jae-PI-tJC" id="WFO-Wj-NKS"/>
-                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="EnterToPrescreen" id="f1h-iQ-A81"/>
-                        <segue destination="WHt-mV-ue8" kind="showDetail" identifier="EnterClear" id="hr8-S9-UbP"/>
-                        <segue destination="pEY-nU-uDH" kind="showDetail" identifier="EnterNotClear" id="Bre-r1-uha"/>
-                        <segue destination="TjZ-hJ-Ptg" kind="show" identifier="CreateAccount" id="fGP-kJ-Du6"/>
+                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="MainToPrescreen" id="f1h-iQ-A81"/>
+                        <segue destination="WHt-mV-ue8" kind="showDetail" identifier="MainToClear" id="hr8-S9-UbP"/>
+                        <segue destination="pEY-nU-uDH" kind="showDetail" identifier="MainToNotClear" id="Bre-r1-uha"/>
+                        <segue destination="TjZ-hJ-Ptg" kind="show" identifier="SignUp" id="fGP-kJ-Du6"/>
                         <segue destination="nEQ-17-Qf2" kind="showDetail" identifier="LogIn" id="DZI-q5-7Cs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="125"/>
+            <point key="canvasLocation" x="575" y="125"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Zwn-bo-gPD">
@@ -379,13 +379,13 @@
                         <outlet property="passwordInput" destination="UNJ-sz-DBW" id="wqQ-Fm-dmQ"/>
                         <outlet property="resetPasswordButton" destination="8Hl-vM-SKk" id="Abf-SF-cYp"/>
                         <outlet property="signUpButton" destination="oXg-5m-DwZ" id="bi6-l2-5rH"/>
-                        <segue destination="UkE-dm-dQD" kind="show" identifier="LoggedInSuccess" id="NO5-IG-vMG"/>
+                        <segue destination="UkE-dm-dQD" kind="show" identifier="LogInToPrescreen" id="NO5-IG-vMG"/>
                         <segue destination="TjZ-hJ-Ptg" kind="show" identifier="LogInToSignUp" id="dgj-OI-J0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJy-Qv-hWV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-355" y="506"/>
+            <point key="canvasLocation" x="-355" y="524"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="5EZ-pL-bJ8">
@@ -500,8 +500,8 @@
                         <outlet property="fullNameLabel" destination="pyu-06-I0D" id="J6w-TQ-dAf"/>
                         <outlet property="nextButton" destination="Ke0-Hd-WJB" id="vos-bv-6pn"/>
                         <outlet property="signOutButton" destination="p6H-Ha-s3F" id="Uov-iB-Kp5"/>
-                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="QuestionViewSegue" id="jqx-Bu-Q81"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="signOutToMain" id="Wcd-1t-Klc"/>
+                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="InfoToPrescreen" id="jqx-Bu-Q81"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SignOutSegue" id="Wcd-1t-Klc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCc-me-mG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -857,14 +857,14 @@
                         <outlet property="submitButton" destination="btL-yJ-knN" id="VEy-fd-7Rz"/>
                         <outlet property="temperatureInput" destination="xwS-dj-tER" id="7gd-Zs-wN4"/>
                         <outlet property="viewMyInfoButton" destination="JpI-jY-zXR" id="rmQ-Zt-Cvw"/>
-                        <segue destination="DMq-PU-ezD" kind="showDetail" identifier="BackToVC2" id="XcV-9x-PR2"/>
+                        <segue destination="DMq-PU-ezD" kind="showDetail" identifier="ViewInfo" id="XcV-9x-PR2"/>
                         <segue destination="WHt-mV-ue8" kind="showDetail" identifier="ClearSegue" id="fdI-wq-Gke"/>
                         <segue destination="pEY-nU-uDH" kind="showDetail" identifier="NotClearSegue" id="Dfr-nD-yQq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8K-sU-fXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1442" y="125"/>
+            <point key="canvasLocation" x="1441" y="125"/>
         </scene>
         <!--Clear View Controller-->
         <scene sceneID="os9-4n-xnN">
@@ -973,7 +973,7 @@
                         <outlet property="nameLabel" destination="7Nw-FP-yI6" id="HlN-ic-39e"/>
                         <outlet property="resubmitFormButton" destination="r00-cB-klY" id="iQ5-su-imH"/>
                         <outlet property="timeLabel" destination="jUN-2c-sXE" id="HGU-XP-pzC"/>
-                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="ClearToQuestionnaire" id="ZBN-C6-WAg"/>
+                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="ClearToPrescreen" id="ZBN-C6-WAg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c87-iz-9aL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1176,7 +1176,7 @@
                         <outlet property="nameLabel" destination="cCL-EA-iYc" id="d3S-xt-XFc"/>
                         <outlet property="timeLabel" destination="0KM-Um-jmT" id="YPT-xp-V2j"/>
                         <outlet property="yesQuestionsLabel" destination="J4R-xF-P1X" id="61n-Dq-oou"/>
-                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="NotClearToQuestionnaire" id="cvG-77-wAd"/>
+                        <segue destination="UkE-dm-dQD" kind="showDetail" identifier="NotClearToPrescreen" id="cvG-77-wAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXn-Qs-ovp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1187,8 +1187,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Dfr-nD-yQq"/>
         <segue reference="fdI-wq-Gke"/>
-        <segue reference="jqx-Bu-Q81"/>
-        <segue reference="Idc-3X-GkN"/>
+        <segue reference="ZBN-C6-WAg"/>
+        <segue reference="DZI-q5-7Cs"/>
         <segue reference="dgj-OI-J0b"/>
     </inferredMetricsTieBreakers>
     <resources>

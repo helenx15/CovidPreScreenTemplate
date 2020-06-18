@@ -17,7 +17,6 @@
 //    Key: "TimeSubmitted"
 
 import UIKit
-import GoogleSignIn
 import FirebaseAuth
 import Firebase
 
@@ -34,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "CreateAccount", sender: self)
+        self.performSegue(withIdentifier: "SignUp", sender: self)
     }
     
     // Moves forward to student info screen when "Enter" button is pressed
@@ -46,7 +45,7 @@ class ViewController: UIViewController {
         if (savedDefaults.value(forKey: "UserClear") != nil) {
             let clear = savedDefaults.value(forKey: "UserClear") as? Bool
             if (clear!) {
-                self.performSegue(withIdentifier: "EnterClear", sender: self)
+                self.performSegue(withIdentifier: "MainToClear", sender: self)
             }
         }
 
@@ -54,12 +53,12 @@ class ViewController: UIViewController {
         else if (savedDefaults.value(forKey: "UserNotClear") != nil) {
             let notclear = savedDefaults.value(forKey: "UserNotClear") as? Bool
             if (notclear!) {
-                self.performSegue(withIdentifier: "EnterNotClear", sender: self)
+                self.performSegue(withIdentifier: "MainToNotClear", sender: self)
             }
         }
 
         else {
-            self.performSegue(withIdentifier: "EnterToPrescreen", sender: self)
+            self.performSegue(withIdentifier: "MainToPrescreen", sender: self)
         }
     }
     

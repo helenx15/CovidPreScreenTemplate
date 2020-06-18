@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import GoogleSignIn
 
 class NotClearViewController: UIViewController {
     
@@ -40,7 +39,7 @@ class NotClearViewController: UIViewController {
 
     // Moves backward to questionnaire screen when "Go Back" button is pressed
     @IBAction func backToQuestionnairePressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "NotClearToQuestionnaire", sender: self)
+        self.performSegue(withIdentifier: "NotClearToPrescreen", sender: self)
     }
     
     override func viewDidLoad() {

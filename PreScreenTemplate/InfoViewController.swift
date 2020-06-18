@@ -24,7 +24,7 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            self.performSegue(withIdentifier: "signOutToMain", sender: self)
+            self.performSegue(withIdentifier: "SignOutSegue", sender: self)
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }
@@ -32,7 +32,7 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
    
     // Moves forward to questionnaire screen when "Continue" button is pressed
     @IBAction func continueButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "QuestionViewSegue", sender: self)
+        self.performSegue(withIdentifier: "InfoToPrescreen", sender: self)
     }
     
     override func viewDidLoad() {

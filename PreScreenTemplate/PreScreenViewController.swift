@@ -9,7 +9,6 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
-import GoogleSignIn
 
 class PreScreenViewController: UIViewController, UITextFieldDelegate {
         
@@ -255,7 +254,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     
     // Moves backward to student info screen when "Back" button is pressed
     @IBAction func backButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "BackToVC2", sender: self)
+        self.performSegue(withIdentifier: "ViewInfo", sender: self)
     }
     
     // Closes keyboard when user touches outside of the keyboard

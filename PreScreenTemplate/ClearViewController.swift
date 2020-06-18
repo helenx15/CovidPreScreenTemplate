@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import GoogleSignIn
 
 class ClearViewController: UIViewController {
     
@@ -21,16 +20,14 @@ class ClearViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Clear all saved data before going back to questionnaire screen
-        if segue.identifier == "ClearToQuestionnaire" {
-            let savedDefaults = UserDefaults.standard
-            savedDefaults.removeObject(forKey: "UserClear")
-            savedDefaults.removeObject(forKey: "Temperature")
-        }
+        let savedDefaults = UserDefaults.standard
+        savedDefaults.removeObject(forKey: "UserClear")
+        savedDefaults.removeObject(forKey: "Temperature")
     }
     
     // Moves backward to questionnaire screen when "Back" button is pressed
     @IBAction func resubmitFormPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "ClearToQuestionnaire", sender: self)
+        self.performSegue(withIdentifier: "ClearToPrescreen", sender: self)
     }
     
     override func viewDidLoad() {

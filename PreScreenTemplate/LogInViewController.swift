@@ -39,7 +39,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 else {
                     if (Auth.auth().currentUser?.isEmailVerified == true ) {
                         // If user is verified go to prescreen
-                        self.performSegue(withIdentifier: "LoggedInSuccess", sender: self)
+                        self.performSegue(withIdentifier: "LogInToPrescreen", sender: self)
                     } else {
                         self.logInLabel.text = "Your email has not been verified. Another email verification email has been sent."
                         
