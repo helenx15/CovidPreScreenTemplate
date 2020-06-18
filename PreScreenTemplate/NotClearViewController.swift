@@ -30,7 +30,7 @@ class NotClearViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Clear all saved data before going back to questionnaire screen
         let savedDefaults = UserDefaults.standard
-        savedDefaults.removeObject(forKey: "FormSubmittedNotClear")
+        savedDefaults.removeObject(forKey: "UserNotClear")
         savedDefaults.removeObject(forKey: "Q1Yes")
         savedDefaults.removeObject(forKey: "Q2Yes")
         savedDefaults.removeObject(forKey: "Q3Yes")

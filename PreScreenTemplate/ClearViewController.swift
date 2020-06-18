@@ -23,7 +23,7 @@ class ClearViewController: UIViewController {
         // Clear all saved data before going back to questionnaire screen
         if segue.identifier == "ClearToQuestionnaire" {
             let savedDefaults = UserDefaults.standard
-            savedDefaults.removeObject(forKey: "FormSubmittedClear")
+            savedDefaults.removeObject(forKey: "UserClear")
             savedDefaults.removeObject(forKey: "Temperature")
         }
     }

@@ -6,8 +6,8 @@
 //  Copyright © 2020 Helen Xiao. All rights reserved.
 //
 //  LIST OF ALL SAVED DEFAULTS
-//    Key: "FormSubmittedClear"
-//    Key: "FormSubmittedNotClear"
+//    Key: "UserClear"
+//    Key: "UserNotClear"
 //    Key: "Q1Yes"
 //    Key: "Q2Yes"
 //    Key: "Q3Yes"
@@ -43,16 +43,16 @@ class ViewController: UIViewController {
         let savedDefaults = UserDefaults.standard
 
         // User has already submitted the form that day and is clear; go to clear screen
-        if (savedDefaults.value(forKey: "FormSubmittedClear") != nil) {
-            let clear = savedDefaults.value(forKey: "FormSubmittedClear") as? Bool
+        if (savedDefaults.value(forKey: "UserClear") != nil) {
+            let clear = savedDefaults.value(forKey: "UserClear") as? Bool
             if (clear!) {
                 self.performSegue(withIdentifier: "EnterClear", sender: self)
             }
         }
 
         // User has already submitted the form that day and is not clear; go tot he not clear screen
-        else if (savedDefaults.value(forKey: "FormSubmittedNotClear") != nil) {
-            let notclear = savedDefaults.value(forKey: "FormSubmittedNotClear") as? Bool
+        else if (savedDefaults.value(forKey: "UserNotClear") != nil) {
+            let notclear = savedDefaults.value(forKey: "UserNotClear") as? Bool
             if (notclear!) {
                 self.performSegue(withIdentifier: "EnterNotClear", sender: self)
             }
@@ -84,8 +84,8 @@ class ViewController: UIViewController {
         if (savedDefaults.value(forKey: "DateSubmitted") == nil || (savedDefaults.value(forKey: "DateSubmitted") as! String) != currentdate) {
            
             // Dates are not the same, clear all previous date's data: Answers to questionnaire, clear/not clear screens, temp entered, date submitted
-            savedDefaults.removeObject(forKey: "FormSubmittedClear")
-            savedDefaults.removeObject(forKey: "FormSubmittedNotClear")
+            savedDefaults.removeObject(forKey: "UserClear")
+            savedDefaults.removeObject(forKey: "UserNotClear")
             savedDefaults.removeObject(forKey: "Q1Yes")
             savedDefaults.removeObject(forKey: "Q2Yes")
             savedDefaults.removeObject(forKey: "Q3Yes")

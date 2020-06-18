@@ -140,7 +140,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             if (temperatureInput.text! != "") {
                 savedDefaults.set(temperatureInput.text!, forKey: "Temperature")
             }
-            savedDefaults.set(true, forKey: "FormSubmittedClear")
+            savedDefaults.set(true, forKey: "UserClear")
         }
         
         // Info for Not Clear Screen
@@ -164,7 +164,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             if (temperatureInput.text! != "") {
                 savedDefaults.set(temperatureInput.text! + " °F", forKey: "Temperature")
             }
-            savedDefaults.set(true, forKey: "FormSubmittedNotClear")
+            savedDefaults.set(true, forKey: "UserNotClear")
         }
         
         // Info for both Clear and Not Clear screens AKA Submit Button Validly Pressed
