@@ -24,7 +24,7 @@ class ClearViewController: UIViewController {
         if segue.identifier == "ClearToQuestionnaire" {
             let savedDefaults = UserDefaults.standard
             savedDefaults.removeObject(forKey: "FormSubmittedClear")
-            savedDefaults.removeObject(forKey: "TempEntered")
+            savedDefaults.removeObject(forKey: "Temperature")
         }
     }
     

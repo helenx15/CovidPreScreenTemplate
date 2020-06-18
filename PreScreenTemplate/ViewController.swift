@@ -12,7 +12,7 @@
 //    Key: "Q2Yes"
 //    Key: "Q3Yes"
 //    Key: "Q4Yes"
-//    Key: "TempEntered"
+//    Key: "Temperature"
 //    Key: "DateSubmitted"
 //    Key: "TimeSubmitted"
 
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
             savedDefaults.removeObject(forKey: "Q2Yes")
             savedDefaults.removeObject(forKey: "Q3Yes")
             savedDefaults.removeObject(forKey: "Q4Yes")
-            savedDefaults.removeObject(forKey: "TempEntered")
+            savedDefaults.removeObject(forKey: "Temperature")
             savedDefaults.removeObject(forKey: "DateSubmitted")
             savedDefaults.removeObject(forKey: "TimeSubmitted")
         }

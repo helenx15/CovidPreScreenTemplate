@@ -35,7 +35,7 @@ class NotClearViewController: UIViewController {
         savedDefaults.removeObject(forKey: "Q2Yes")
         savedDefaults.removeObject(forKey: "Q3Yes")
         savedDefaults.removeObject(forKey: "Q4Yes")
-        savedDefaults.removeObject(forKey: "TempEntered")
+        savedDefaults.removeObject(forKey: "Temperature")
     }
 
     // Moves backward to questionnaire screen when "Go Back" button is pressed
@@ -70,8 +70,8 @@ class NotClearViewController: UIViewController {
         if (savedDefaults.value(forKey: "Q4Yes") != nil) {
             question4 = (savedDefaults.value(forKey: "Q4Yes") as? String)!
         }
-        if (savedDefaults.value(forKey: "TempEntered") != nil) {
-            feverdeg = (savedDefaults.value(forKey: "TempEntered") as? String)!
+        if (savedDefaults.value(forKey: "Temperature") != nil) {
+            feverdeg = (savedDefaults.value(forKey: "Temperature") as? String)!
         }
         
         // Places previously loaded data onto screen

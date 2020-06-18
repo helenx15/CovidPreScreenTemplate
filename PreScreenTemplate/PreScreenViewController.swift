@@ -138,7 +138,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
         // Info for Clear Screen
         if segue.identifier == "ClearSegue" {
             if (temperatureInput.text! != "") {
-                savedDefaults.set(temperatureInput.text!, forKey: "TempEntered")
+                savedDefaults.set(temperatureInput.text!, forKey: "Temperature")
             }
             savedDefaults.set(true, forKey: "FormSubmittedClear")
         }
@@ -162,7 +162,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                 savedDefaults.set(question4Prompt.text!, forKey: "Q4Yes")
             }
             if (temperatureInput.text! != "") {
-                savedDefaults.set(temperatureInput.text! + " °F", forKey: "TempEntered")
+                savedDefaults.set(temperatureInput.text! + " °F", forKey: "Temperature")
             }
             savedDefaults.set(true, forKey: "FormSubmittedNotClear")
         }
@@ -179,8 +179,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             var q3answer = "No"
             var q4answer = "No"
             
-            if (savedDefaults.value(forKey: "TempEntered") != nil) {
-                fevertemp = (savedDefaults.value(forKey: "TempEntered") as? String)!
+            if (savedDefaults.value(forKey: "Temperature") != nil) {
+                fevertemp = (savedDefaults.value(forKey: "Temperature") as? String)!
             }
             
             if (question1Yes.isSelected) {
