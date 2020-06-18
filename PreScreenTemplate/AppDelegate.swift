@@ -8,16 +8,65 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+import FirebaseAuth
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
+    var window: UIWindow?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
+    }
+    
+   func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+     // ...
+  
+        if let error = error {
+            print (error.localizedDescription)
+            return
+        } else {
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (result, error) in
+                if error == nil {
+                } else {
+      //              print (error?.localizedDescription)
+                }
+            }
+        }
+   }
+    
+    
+    private func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+      return userActivity.webpageURL.flatMap(handlePasswordlessSignIn)!
+    }
+//
+    func handlePasswordlessSignIn(withURL url: URL) -> Bool {
+        print("we aint never getting here")
+        let link = url.absoluteString
+        if Auth.auth().isSignIn(withEmailLink: link) {
+            UserDefaults.standard.set(link, forKey: "Link")
+            return true
+        }
+        return false
+    }
+
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+      -> Bool {
+        print("here?")
+      return GIDSignIn.sharedInstance().handle(url)
     }
 
     // MARK: UISceneSession Lifecycle
