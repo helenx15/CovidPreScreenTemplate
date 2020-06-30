@@ -124,7 +124,6 @@
 				5B28A958249B31F300418350 /* Frameworks */,
 				5B28A959249B31F300418350 /* Resources */,
 				284B067596651043342F8E56 /* [CP] Embed Pods Frameworks */,
-				7BBBB7D00E76441D1081313E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,23 +197,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PreScreenTemplate/Pods-PreScreenTemplate-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BBBB7D00E76441D1081313E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PreScreenTemplate/Pods-PreScreenTemplate-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PreScreenTemplate/Pods-PreScreenTemplate-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PreScreenTemplate/Pods-PreScreenTemplate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A53A52FA9054254334614B56 /* [CP] Check Pods Manifest.lock */ = {

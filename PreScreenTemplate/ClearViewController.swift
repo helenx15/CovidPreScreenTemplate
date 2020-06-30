@@ -36,10 +36,10 @@ class ClearViewController: UIViewController {
         // Do any additional setup after loading the view.
         resubmitFormButton.layer.cornerRadius = 10.0
         
-        let username = Auth.auth().currentUser?.displayName
+        let userName = Auth.auth().currentUser?.displayName
 
-        if (username != nil){
-            nameLabel.text = username
+        if (userName != nil){
+            nameLabel.text = userName
         }
         
         let savedDefaults = UserDefaults.standard
@@ -77,8 +77,8 @@ class ClearViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
-        let form = formatter.string(from: date)
-        dateLabel.text = day + ", " + form
+        let formattedDate = formatter.string(from: date)
+        dateLabel.text = day + ", " + formattedDate             // Produces a string like Thursday, May 7, 2020
     }
 
 }

@@ -18,7 +18,7 @@ class NotClearViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var feverdeg = String()
+    var temperatureRecorded = String()
     
     var question1 = String()
     var question2 = String()
@@ -49,12 +49,12 @@ class NotClearViewController: UIViewController {
         goBackButton.layer.cornerRadius = 10.0
         
         
-        let username = Auth.auth().currentUser?.displayName
-        if (username != nil){
-            nameLabel.text = username
+        let userName = Auth.auth().currentUser?.displayName
+        if (userName != nil){
+            nameLabel.text = userName
         }
         
-        // Load saved data from app for questions answered yes + temperatuer
+        // Load saved data from app for questions answered yes + temperature
         let savedDefaults = UserDefaults.standard
         
         if (savedDefaults.value(forKey: "Q1Yes") != nil) {
@@ -70,17 +70,17 @@ class NotClearViewController: UIViewController {
             question4 = (savedDefaults.value(forKey: "Q4Yes") as? String)!
         }
         if (savedDefaults.value(forKey: "Temperature") != nil) {
-            feverdeg = (savedDefaults.value(forKey: "Temperature") as? String)!
+            temperatureRecorded = (savedDefaults.value(forKey: "Temperature") as? String)!
         }
         
         // Places previously loaded data onto screen
         if (question1 != "") {
             yesQuestionsLabel.text = "\n" + question1 + "\n"
-            if ( feverdeg != "") {
-                if feverdeg.count > 5 {
-                    feverdeg = String(feverdeg.prefix(5))
+            if ( temperatureRecorded != "") {
+                if temperatureRecorded.count > 5 {
+                    temperatureRecorded = String(temperatureRecorded.prefix(5))
                 }
-                yesQuestionsLabel.text = yesQuestionsLabel.text! + "     Reported: " + feverdeg + "\n"
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "     Reported: " + temperatureRecorded + "\n"
             }
         }
         
@@ -129,8 +129,8 @@ class NotClearViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
-        let form = formatter.string(from: date)
-        dateLabel.text = day + ", " + form
+        let formattedDate = formatter.string(from: date)
+        dateLabel.text = day + ", " + formattedDate              // Produces a string like Thursday, May 7, 2020
     }
 
 }

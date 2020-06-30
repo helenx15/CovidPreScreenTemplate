@@ -9,7 +9,6 @@
 
 import UIKit
 import Firebase
-import GoogleSignIn
 import FirebaseAuth
 
 class InfoViewController: UIViewController, UITextFieldDelegate {
@@ -20,7 +19,6 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailAddressLabel: UILabel!
     
     @IBAction func signOutTap(_ sender: Any) {
-        GIDSignIn.sharedInstance()?.signOut()
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()

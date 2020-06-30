@@ -49,10 +49,10 @@ class ViewController: UIViewController {
             }
         }
 
-        // User has already submitted the form that day and is not clear; go tot he not clear screen
+        // User has already submitted the form that day and is not clear; go to not clear screen
         else if (savedDefaults.value(forKey: "UserNotClear") != nil) {
-            let notclear = savedDefaults.value(forKey: "UserNotClear") as? Bool
-            if (notclear!) {
+            let notClear = savedDefaults.value(forKey: "UserNotClear") as? Bool
+            if (notClear!) {
                 self.performSegue(withIdentifier: "MainToNotClear", sender: self)
             }
         }
@@ -77,10 +77,10 @@ class ViewController: UIViewController {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
-        let currentdate = formatter.string(from: date)             // Produces a string like 01-01-2020
+        let currentDate = formatter.string(from: date)             // Produces a string like 01-01-2020
         
         // Check if there is a previous date saved
-        if (savedDefaults.value(forKey: "DateSubmitted") == nil || (savedDefaults.value(forKey: "DateSubmitted") as! String) != currentdate) {
+        if (savedDefaults.value(forKey: "DateSubmitted") == nil || (savedDefaults.value(forKey: "DateSubmitted") as! String) != currentDate) {
            
             // Dates are not the same, clear all previous date's data: Answers to questionnaire, clear/not clear screens, temp entered, date submitted
             savedDefaults.removeObject(forKey: "UserClear")
