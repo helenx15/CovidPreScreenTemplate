@@ -68,7 +68,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex. John Appleseed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIB-c4-rh6">
                                 <rect key="frame" x="41.5" y="136.5" width="331" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcD-Jg-zj2">
                                 <rect key="frame" x="40" y="555.5" width="334" height="50"/>
@@ -497,7 +497,9 @@
                     <navigationItem key="navigationItem" id="Ued-o9-VgM"/>
                     <connections>
                         <outlet property="emailAddressLabel" destination="Hno-kM-iZC" id="5ON-20-P1Z"/>
+                        <outlet property="emailAddressTitleLabel" destination="krh-Cy-V0r" id="K6d-a7-KZd"/>
                         <outlet property="fullNameLabel" destination="pyu-06-I0D" id="J6w-TQ-dAf"/>
+                        <outlet property="fullNameTitleLabel" destination="ERs-gj-56F" id="qDJ-99-7D2"/>
                         <outlet property="nextButton" destination="Ke0-Hd-WJB" id="vos-bv-6pn"/>
                         <outlet property="signOutButton" destination="p6H-Ha-s3F" id="Uov-iB-Kp5"/>
                         <segue destination="UkE-dm-dQD" kind="showDetail" identifier="InfoToPrescreen" id="jqx-Bu-Q81"/>
@@ -1187,8 +1189,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bre-r1-uha"/>
         <segue reference="hr8-S9-UbP"/>
-        <segue reference="NO5-IG-vMG"/>
-        <segue reference="DZI-q5-7Cs"/>
+        <segue reference="jqx-Bu-Q81"/>
+        <segue reference="Idc-3X-GkN"/>
         <segue reference="dgj-OI-J0b"/>
     </inferredMetricsTieBreakers>
     <resources>

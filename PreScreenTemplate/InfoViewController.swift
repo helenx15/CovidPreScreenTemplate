@@ -6,7 +6,6 @@
 //  Copyright © 2020 Helen Xiao. All rights reserved.
 //
 
-
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -15,6 +14,8 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var fullNameTitleLabel: UILabel!
+    @IBOutlet weak var emailAddressTitleLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var emailAddressLabel: UILabel!
     
@@ -42,6 +43,13 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
         
         guard let username = Auth.auth().currentUser?.displayName else {return}
         guard let useremail = Auth.auth().currentUser?.email else {return}
+        
+        if (username == useremail) {
+            emailAddressLabel.isHidden = true
+            emailAddressTitleLabel.isHidden = true
+            fullNameTitleLabel.text = "Email"
+        }
+        
         fullNameLabel.text = username
         emailAddressLabel.text = useremail
     }

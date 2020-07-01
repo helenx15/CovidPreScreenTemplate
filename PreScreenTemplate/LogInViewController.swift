@@ -38,6 +38,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 }
                 else {
                     if (Auth.auth().currentUser?.isEmailVerified == true ) {
+                        if (Auth.auth().currentUser?.email == nil || Auth.auth().currentUser?.email == "") {
+                            Auth.auth().currentUser?.updateEmail(to: email)
+                        }
+                        if (Auth.auth().currentUser?.displayName == nil || Auth.auth().currentUser?.displayName == "") {
+                            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                            changeRequest?.displayName = email
+                            changeRequest?.commitChanges { (error) in
+                                if (error != nil) {
+                                }
+                            }
+                        }
                         // If user is verified go to prescreen
                         self.performSegue(withIdentifier: "LogInToPrescreen", sender: self)
                     } else {
