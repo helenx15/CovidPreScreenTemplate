@@ -35,6 +35,8 @@ class NotClearViewController: UIViewController {
         savedDefaults.removeObject(forKey: "Q3Yes")
         savedDefaults.removeObject(forKey: "Q4Yes")
         savedDefaults.removeObject(forKey: "Temperature")
+        savedDefaults.removeObject(forKey: "DateSubmitted")
+        savedDefaults.removeObject(forKey: "TimeSubmitted")
     }
 
     // Moves backward to questionnaire screen when "Go Back" button is pressed
@@ -73,27 +75,35 @@ class NotClearViewController: UIViewController {
             temperatureRecorded = (savedDefaults.value(forKey: "Temperature") as? String)!
         }
         
+        if (question1 == "" && question2 == "" && question3 == "" && question4 == "") {
+                   yesQuestionsLabel.text = "\n" + "None" + "\n"
+               }
+        
+        else {
+        
         // Places previously loaded data onto screen
-        if (question1 != "") {
-            yesQuestionsLabel.text = "\n" + question1 + "\n"
-            if ( temperatureRecorded != "") {
-                if temperatureRecorded.count > 5 {
-                    temperatureRecorded = String(temperatureRecorded.prefix(5))
-                }
-                yesQuestionsLabel.text = yesQuestionsLabel.text! + "     Reported: " + temperatureRecorded + "\n"
+            if (question1 != "") {
+                yesQuestionsLabel.text = "\n" + question1 + "\n"
+            }
+            if (question2 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question2 + "\n"
+            }
+            if (question3 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question3 + "\n"
+            }
+            if (question4 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question4 + "\n"
             }
         }
         
-        if (question2 != "") {
-            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question2 + "\n"
-        }
-        if (question3 != "") {
-            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question3 + "\n"
-        }
-        if (question4 != "") {
-            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question4 + "\n"
+        if ( temperatureRecorded != "") {
+            if temperatureRecorded.count > 5 {
+                temperatureRecorded = String(temperatureRecorded.prefix(5))
+            }
+            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + "Temp Reported: " + temperatureRecorded + " °F" + "\n"
         }
         
+            
         let timeSubmitted = savedDefaults.value(forKey: "TimeSubmitted")
         timeLabel.text = timeSubmitted as? String
               

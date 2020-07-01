@@ -27,7 +27,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             self.logInLabel.text = "Please fill out all entries."
             self.logInLabel.isHidden = false
         } else {
-            self.logInLabel.text = "Logging you in..."
+            self.logInLabel.text = ""
             self.logInLabel.isHidden = false
             
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in

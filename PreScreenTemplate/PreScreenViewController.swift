@@ -127,6 +127,10 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                }
     }
     
+    @IBAction func covidLink(_ sender: Any) {
+           UIApplication.shared.open(URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fsymptoms.html")! as URL, options: [:], completionHandler: nil)
+       }
+    
     // INSERT ADDITIONAL QUESTIONS HERE
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -161,7 +165,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                 savedDefaults.set(question4Prompt.text!, forKey: "Q4Yes")
             }
             if (temperatureInput.text! != "") {
-                savedDefaults.set(temperatureInput.text! + " °F", forKey: "Temperature")
+                savedDefaults.set(temperatureInput.text!, forKey: "Temperature")
             }
             savedDefaults.set(true, forKey: "UserNotClear")
         }
@@ -179,7 +183,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             var q4Answer = "No"
             
             if (savedDefaults.value(forKey: "Temperature") != nil) {
-                feverTemp = (savedDefaults.value(forKey: "Temperature") as? String)!
+                feverTemp = (savedDefaults.value(forKey: "Temperature") as? String)! + " °F"
             }
             
             if (question1Yes.isSelected) {
@@ -210,15 +214,23 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             // Save the current day to app
             savedDefaults.set(currentDate, forKey: "DateSubmitted")
             savedDefaults.set(timestamp, forKey: "TimeSubmitted")
-
-            // Data sent to firebase
-            self.ref.child(userName).child("email").setValue(userEmail)
             
-            self.ref.child(userName).child(currentDate).child("question1").setValue(q1Answer)
-            self.ref.child(userName).child(currentDate).child("question2").setValue(q2Answer)
-            self.ref.child(userName).child(currentDate).child("question3").setValue(q3Answer)
-            self.ref.child(userName).child(currentDate).child("question4").setValue(q4Answer)
-            self.ref.child(userName).child(currentDate).child("timestamp").setValue(timestamp)
+            var root = ""
+            let adjustedemail = userEmail.replacingOccurrences(of: ".", with: ",")
+            
+            // For those added manually
+            if (userEmail == userName) {
+                root = adjustedemail
+            }
+            else {
+                root = userName + "; " + adjustedemail
+            }
+            
+            self.ref.child(root).child(currentDate).child("question1").setValue(q1Answer)
+            self.ref.child(root).child(currentDate).child("question2").setValue(q2Answer)
+            self.ref.child(root).child(currentDate).child("question3").setValue(q3Answer)
+            self.ref.child(root).child(currentDate).child("question4").setValue(q4Answer)
+            self.ref.child(root).child(currentDate).child("timestamp").setValue(timestamp)
         }
     }
     
@@ -234,7 +246,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             let temperatureInt = Double(temperatureInput.text!)
             
             // CLEAR: Qs 2-4 No + No fever / Fever < 100.4
-            if ((question2No.isSelected && question3No.isSelected && question4No.isSelected) && ((question1No.isSelected) || (temperatureInput.text! != "" && temperatureInt!.isLess(than: 100.4))))
+            
+            if ((question2No.isSelected && question3No.isSelected && question4No.isSelected) && ((question1No.isSelected) && (temperatureInput.text! == "" || temperatureInt!.isLess(than: 100.4))))
             {
                 self.performSegue(withIdentifier: "ClearSegue", sender: self)
             }

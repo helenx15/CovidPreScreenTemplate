@@ -23,6 +23,8 @@ class ClearViewController: UIViewController {
         let savedDefaults = UserDefaults.standard
         savedDefaults.removeObject(forKey: "UserClear")
         savedDefaults.removeObject(forKey: "Temperature")
+        savedDefaults.removeObject(forKey: "DateSubmitted")
+        savedDefaults.removeObject(forKey: "TimeSubmitted")
     }
     
     // Moves backward to questionnaire screen when "Back" button is pressed

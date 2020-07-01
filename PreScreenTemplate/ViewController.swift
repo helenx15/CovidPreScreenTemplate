@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet weak var termsError: UILabel!
     
     @IBAction func logInPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "LogIn", sender: self)
@@ -40,6 +41,10 @@ class ViewController: UIViewController {
     @IBAction func enterViewButtonPressed(_ sender: Any) {
 
         let savedDefaults = UserDefaults.standard
+        if (savedDefaults.value(forKey: "AcceptedTerms") == nil) {
+            termsError.isHidden = false
+                return
+        }
 
         // User has already submitted the form that day and is clear; go to clear screen
         if (savedDefaults.value(forKey: "UserClear") != nil) {
@@ -60,6 +65,20 @@ class ViewController: UIViewController {
         else {
             self.performSegue(withIdentifier: "MainToPrescreen", sender: self)
         }
+    }
+    
+    func showAlert() {
+        let savedDefaults = UserDefaults.standard
+    
+        let alert = UIAlertController(title: "Terms and Conditions", message: "Terms and conditions text here", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Accept", style: .cancel, handler:{ action in
+            savedDefaults.set("Accepted", forKey: "AcceptedTerms")
+        }))
+        alert.addAction(UIAlertAction(title: "Decline", style: .destructive, handler:{ action in
+            print("tapped decline")
+        }))
+        
+        present(alert,animated: true)
     }
     
     override func viewDidLoad() {
@@ -102,6 +121,13 @@ class ViewController: UIViewController {
             logInButton.isHidden = false
         }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let savedDefaults = UserDefaults.standard
+        if (savedDefaults.value(forKey: "AcceptedTerms") == nil) {
+            showAlert()
+        }
     }
     
     

@@ -68,7 +68,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex. John Appleseed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIB-c4-rh6">
                                 <rect key="frame" x="41.5" y="136.5" width="331" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcD-Jg-zj2">
                                 <rect key="frame" x="40" y="555.5" width="334" height="50"/>
@@ -207,18 +207,28 @@
                                     <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t01-TZ-B9a"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Please accept the terms and conditions before continuing." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-p5-Zdv">
+                                <rect key="frame" x="52" y="589" width="310.5" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gHz-p5-Zdv" firstAttribute="top" secondItem="P2H-dY-fDh" secondAttribute="bottom" multiplier="810/800" constant="8" symbolic="YES" id="090-7x-W2Y"/>
                             <constraint firstItem="hFc-rm-6fD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="14f-st-cmE"/>
+                            <constraint firstItem="gHz-p5-Zdv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="3W9-dd-PzD"/>
                             <constraint firstItem="P2H-dY-fDh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="6UB-EI-4dK"/>
                             <constraint firstItem="hFc-rm-6fD" firstAttribute="top" secondItem="P2H-dY-fDh" secondAttribute="bottom" multiplier="65/300" constant="8" symbolic="YES" id="9lq-td-cGt"/>
+                            <constraint firstItem="gHz-p5-Zdv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H0A-cC-mu5"/>
                             <constraint firstItem="jae-PI-tJC" firstAttribute="width" secondItem="mCy-Wb-EFV" secondAttribute="width" id="IhY-Ru-PE8"/>
                             <constraint firstItem="P2H-dY-fDh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Nnj-fl-jHe"/>
                             <constraint firstItem="P2H-dY-fDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W3m-qp-24P"/>
                             <constraint firstItem="jae-PI-tJC" firstAttribute="top" secondItem="mCy-Wb-EFV" secondAttribute="bottom" constant="8" symbolic="YES" id="Wvn-Yt-QnJ"/>
                             <constraint firstItem="mCy-Wb-EFV" firstAttribute="top" secondItem="P2H-dY-fDh" secondAttribute="bottom" multiplier="910/800" constant="8" symbolic="YES" id="X9W-vX-KG9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="400-u7-yxL" secondAttribute="trailing" constant="53" id="YQw-Zc-YJA"/>
+                            <constraint firstItem="gHz-p5-Zdv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0452009" id="ZMC-BL-1n3"/>
                             <constraint firstItem="jae-PI-tJC" firstAttribute="height" secondItem="mCy-Wb-EFV" secondAttribute="height" id="aKg-VS-7mf"/>
                             <constraint firstItem="hFc-rm-6fD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dpn-os-nyc"/>
                             <constraint firstItem="400-u7-yxL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" multiplier="0.8" id="eY0-Hl-iav"/>
@@ -237,6 +247,7 @@
                         <outlet property="enterButton" destination="400-u7-yxL" id="fvC-q8-eEm"/>
                         <outlet property="logInButton" destination="mCy-Wb-EFV" id="Egt-rX-vBE"/>
                         <outlet property="signUpButton" destination="jae-PI-tJC" id="WFO-Wj-NKS"/>
+                        <outlet property="termsError" destination="gHz-p5-Zdv" id="v1x-Dy-TBv"/>
                         <segue destination="UkE-dm-dQD" kind="showDetail" identifier="MainToPrescreen" id="f1h-iQ-A81"/>
                         <segue destination="WHt-mV-ue8" kind="showDetail" identifier="MainToClear" id="hr8-S9-UbP"/>
                         <segue destination="pEY-nU-uDH" kind="showDetail" identifier="MainToNotClear" id="Bre-r1-uha"/>
@@ -700,7 +711,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btL-yJ-knN">
-                                <rect key="frame" x="53" y="761.5" width="308" height="58"/>
+                                <rect key="frame" x="53" y="778" width="308" height="58"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                 <state key="normal" title="Submit">
@@ -729,6 +740,13 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-tH-KQ1">
+                                <rect key="frame" x="41.5" y="844" width="331" height="30"/>
+                                <state key="normal" title="COVID-19 Symptoms"/>
+                                <connections>
+                                    <action selector="covidLink:" destination="UkE-dm-dQD" eventType="touchUpInside" id="yuD-RQ-Jeh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -740,10 +758,11 @@
                             <constraint firstItem="2rL-ei-ViX" firstAttribute="top" secondItem="4pH-jW-Z50" secondAttribute="bottom" multiplier="313/300" constant="8" symbolic="YES" id="3zz-83-876"/>
                             <constraint firstItem="ZY9-cL-fbQ" firstAttribute="top" secondItem="4pH-jW-Z50" secondAttribute="bottom" multiplier="450/414" constant="8" symbolic="YES" id="4by-dX-9kP"/>
                             <constraint firstItem="ZY9-cL-fbQ" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.031994" id="6w4-Og-zhM"/>
+                            <constraint firstItem="Dc3-tH-KQ1" firstAttribute="top" secondItem="btL-yJ-knN" secondAttribute="bottom" constant="8" symbolic="YES" id="78X-d8-PcW"/>
                             <constraint firstItem="9ZL-v1-azH" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.052" id="7wf-Cc-Ek6"/>
+                            <constraint firstItem="Dc3-tH-KQ1" firstAttribute="centerX" secondItem="LXv-xq-UtL" secondAttribute="centerX" id="8H0-6D-YHD"/>
                             <constraint firstItem="DN5-kN-3jG" firstAttribute="top" secondItem="4pH-jW-Z50" secondAttribute="bottom" multiplier="313/300" constant="8" symbolic="YES" id="99d-3D-uFU"/>
                             <constraint firstItem="Ogf-34-dBC" firstAttribute="width" secondItem="HLD-RI-dha" secondAttribute="width" multiplier="0.93" constant="1" id="A7b-gw-HRz"/>
-                            <constraint firstItem="btL-yJ-knN" firstAttribute="top" secondItem="5uH-WF-93x" secondAttribute="bottom" multiplier="715/818" constant="8" symbolic="YES" id="ApI-oT-L5K"/>
                             <constraint firstItem="3Na-K6-Ike" firstAttribute="leading" secondItem="5uH-WF-93x" secondAttribute="trailing" multiplier="230/414" constant="8" symbolic="YES" id="B91-hs-TpB"/>
                             <constraint firstItem="KGG-uz-004" firstAttribute="leading" secondItem="TXR-Zz-Hpf" secondAttribute="trailing" multiplier="426/414" constant="8" symbolic="YES" id="BEh-Ac-L0R"/>
                             <constraint firstItem="ry1-Iy-kOM" firstAttribute="centerX" secondItem="LXv-xq-UtL" secondAttribute="centerX" id="BHg-Lq-Shq"/>
@@ -780,6 +799,7 @@
                             <constraint firstItem="Iix-7w-QvD" firstAttribute="leading" secondItem="eib-Lx-kh0" secondAttribute="trailing" multiplier="420/414" constant="8" symbolic="YES" id="S21-7I-Xg5"/>
                             <constraint firstItem="ALl-HY-SwZ" firstAttribute="top" secondItem="ry1-Iy-kOM" secondAttribute="bottom" multiplier="822/800" constant="8" symbolic="YES" id="Svj-JD-0Yu"/>
                             <constraint firstItem="Iix-7w-QvD" firstAttribute="top" secondItem="Ogf-34-dBC" secondAttribute="bottom" multiplier="625/600" constant="8" symbolic="YES" id="Syf-MT-dot"/>
+                            <constraint firstAttribute="bottom" secondItem="Dc3-tH-KQ1" secondAttribute="bottom" multiplier="820/818" constant="20" symbolic="YES" id="TN1-zB-Elx"/>
                             <constraint firstItem="eib-Lx-kh0" firstAttribute="top" secondItem="Ogf-34-dBC" secondAttribute="bottom" multiplier="611/600" constant="8" symbolic="YES" id="Udb-6q-mFz"/>
                             <constraint firstItem="xwS-dj-tER" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.03" id="WkG-Xq-70x"/>
                             <constraint firstItem="Ogf-34-dBC" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.0669643" id="XCM-gr-Uh2"/>
@@ -797,6 +817,7 @@
                             <constraint firstItem="xwS-dj-tER" firstAttribute="centerX" secondItem="LXv-xq-UtL" secondAttribute="centerX" id="eM8-db-nMt"/>
                             <constraint firstItem="4pH-jW-Z50" firstAttribute="width" secondItem="LXv-xq-UtL" secondAttribute="width" multiplier="0.85" id="fab-Y1-Knd"/>
                             <constraint firstItem="ry1-Iy-kOM" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.0668945" id="hTH-j6-Jrr"/>
+                            <constraint firstItem="Dc3-tH-KQ1" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.0334821" id="hoE-PM-Xcc"/>
                             <constraint firstItem="Iix-7w-QvD" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.031808" id="htt-cE-7he"/>
                             <constraint firstItem="JpI-jY-zXR" firstAttribute="leading" secondItem="5uH-WF-93x" secondAttribute="trailing" multiplier="20/414" id="hy9-9V-nP5"/>
                             <constraint firstItem="HLD-RI-dha" firstAttribute="width" secondItem="4pH-jW-Z50" secondAttribute="width" id="jhW-qV-cDK"/>
@@ -814,6 +835,7 @@
                             <constraint firstItem="HLD-RI-dha" firstAttribute="top" secondItem="xwS-dj-tER" secondAttribute="bottom" multiplier="810/800" constant="8" symbolic="YES" id="rQG-Lw-Ifr"/>
                             <constraint firstItem="pGU-R6-OMM" firstAttribute="top" secondItem="Ogf-34-dBC" secondAttribute="bottom" multiplier="625/600" constant="8" symbolic="YES" id="s1L-6W-ekD"/>
                             <constraint firstItem="xwS-dj-tER" firstAttribute="width" secondItem="LXv-xq-UtL" secondAttribute="width" multiplier="0.7" id="t13-T4-kvX"/>
+                            <constraint firstItem="Dc3-tH-KQ1" firstAttribute="width" secondItem="LXv-xq-UtL" secondAttribute="width" multiplier="0.8" id="trL-SF-qP3"/>
                             <constraint firstItem="3jh-sS-iTJ" firstAttribute="top" secondItem="ry1-Iy-kOM" secondAttribute="bottom" multiplier="822/800" constant="8" symbolic="YES" id="uYN-rv-1hf"/>
                             <constraint firstItem="JpI-jY-zXR" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.027" id="vZC-fW-c8e"/>
                             <constraint firstItem="btL-yJ-knN" firstAttribute="height" secondItem="LXv-xq-UtL" secondAttribute="height" multiplier="0.0647321" id="yav-04-ZYQ"/>
@@ -1189,7 +1211,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Bre-r1-uha"/>
         <segue reference="hr8-S9-UbP"/>
-        <segue reference="jqx-Bu-Q81"/>
+        <segue reference="NO5-IG-vMG"/>
         <segue reference="Idc-3X-GkN"/>
         <segue reference="dgj-OI-J0b"/>
     </inferredMetricsTieBreakers>
