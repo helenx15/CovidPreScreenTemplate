@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import GoogleSignIn
 
 class NotClearViewController: UIViewController {
     
@@ -19,7 +18,7 @@ class NotClearViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    var feverdeg = String()
+    var temperatureRecorded = String()
     
     var question1 = String()
     var question2 = String()
@@ -30,17 +29,19 @@ class NotClearViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Clear all saved data before going back to questionnaire screen
         let savedDefaults = UserDefaults.standard
-        savedDefaults.removeObject(forKey: "FormSubmittedNotClear")
+        savedDefaults.removeObject(forKey: "UserNotClear")
         savedDefaults.removeObject(forKey: "Q1Yes")
         savedDefaults.removeObject(forKey: "Q2Yes")
         savedDefaults.removeObject(forKey: "Q3Yes")
         savedDefaults.removeObject(forKey: "Q4Yes")
-        savedDefaults.removeObject(forKey: "TempEntered")
+        savedDefaults.removeObject(forKey: "Temperature")
+        savedDefaults.removeObject(forKey: "DateSubmitted")
+        savedDefaults.removeObject(forKey: "TimeSubmitted")
     }
 
     // Moves backward to questionnaire screen when "Go Back" button is pressed
     @IBAction func backToQuestionnairePressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "NotClearToQuestionnaire", sender: self)
+        self.performSegue(withIdentifier: "NotClearToPrescreen", sender: self)
     }
     
     override func viewDidLoad() {
@@ -50,12 +51,12 @@ class NotClearViewController: UIViewController {
         goBackButton.layer.cornerRadius = 10.0
         
         
-        let username = Auth.auth().currentUser?.displayName
-        if (username != nil){
-            nameLabel.text = username
+        let userName = Auth.auth().currentUser?.displayName
+        if (userName != nil){
+            nameLabel.text = userName
         }
         
-        // Load saved data from app for questions answered yes + temperatuer
+        // Load saved data from app for questions answered yes + temperature
         let savedDefaults = UserDefaults.standard
         
         if (savedDefaults.value(forKey: "Q1Yes") != nil) {
@@ -70,31 +71,39 @@ class NotClearViewController: UIViewController {
         if (savedDefaults.value(forKey: "Q4Yes") != nil) {
             question4 = (savedDefaults.value(forKey: "Q4Yes") as? String)!
         }
-        if (savedDefaults.value(forKey: "TempEntered") != nil) {
-            feverdeg = (savedDefaults.value(forKey: "TempEntered") as? String)!
+        if (savedDefaults.value(forKey: "Temperature") != nil) {
+            temperatureRecorded = (savedDefaults.value(forKey: "Temperature") as? String)!
         }
         
+        if (question1 == "" && question2 == "" && question3 == "" && question4 == "") {
+                   yesQuestionsLabel.text = "\n" + "None" + "\n"
+               }
+        
+        else {
+        
         // Places previously loaded data onto screen
-        if (question1 != "") {
-            yesQuestionsLabel.text = "\n" + question1 + "\n"
-            if ( feverdeg != "") {
-                if feverdeg.count > 5 {
-                    feverdeg = String(feverdeg.prefix(5))
-                }
-                yesQuestionsLabel.text = yesQuestionsLabel.text! + "     Reported: " + feverdeg + "\n"
+            if (question1 != "") {
+                yesQuestionsLabel.text = "\n" + question1 + "\n"
+            }
+            if (question2 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question2 + "\n"
+            }
+            if (question3 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question3 + "\n"
+            }
+            if (question4 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question4 + "\n"
             }
         }
         
-        if (question2 != "") {
-            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question2 + "\n"
-        }
-        if (question3 != "") {
-            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question3 + "\n"
-        }
-        if (question4 != "") {
-            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question4 + "\n"
+        if ( temperatureRecorded != "") {
+            if temperatureRecorded.count > 5 {
+                temperatureRecorded = String(temperatureRecorded.prefix(5))
+            }
+            yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + "Temp Reported: " + temperatureRecorded + " °F" + "\n"
         }
         
+            
         let timeSubmitted = savedDefaults.value(forKey: "TimeSubmitted")
         timeLabel.text = timeSubmitted as? String
               
@@ -130,8 +139,8 @@ class NotClearViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.timeStyle = .none
         formatter.dateStyle = .medium
-        let form = formatter.string(from: date)
-        dateLabel.text = day + ", " + form
+        let formattedDate = formatter.string(from: date)
+        dateLabel.text = day + ", " + formattedDate              // Produces a string like Thursday, May 7, 2020
     }
 
 }

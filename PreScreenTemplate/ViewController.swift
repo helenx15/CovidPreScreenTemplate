@@ -6,18 +6,17 @@
 //  Copyright © 2020 Helen Xiao. All rights reserved.
 //
 //  LIST OF ALL SAVED DEFAULTS
-//    Key: "FormSubmittedClear"
-//    Key: "FormSubmittedNotClear"
+//    Key: "UserClear"
+//    Key: "UserNotClear"
 //    Key: "Q1Yes"
 //    Key: "Q2Yes"
 //    Key: "Q3Yes"
 //    Key: "Q4Yes"
-//    Key: "TempEntered"
+//    Key: "Temperature"
 //    Key: "DateSubmitted"
 //    Key: "TimeSubmitted"
 
 import UIKit
-import GoogleSignIn
 import FirebaseAuth
 import Firebase
 
@@ -28,39 +27,58 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet weak var termsError: UILabel!
     
     @IBAction func logInPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "LogIn", sender: self)
     }
     
     @IBAction func signUpPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "CreateAccount", sender: self)
+        self.performSegue(withIdentifier: "SignUp", sender: self)
     }
     
     // Moves forward to student info screen when "Enter" button is pressed
     @IBAction func enterViewButtonPressed(_ sender: Any) {
 
         let savedDefaults = UserDefaults.standard
+        if (savedDefaults.value(forKey: "AcceptedTerms") == nil) {
+            termsError.isHidden = false
+                return
+        }
 
         // User has already submitted the form that day and is clear; go to clear screen
-        if (savedDefaults.value(forKey: "FormSubmittedClear") != nil) {
-            let clear = savedDefaults.value(forKey: "FormSubmittedClear") as? Bool
+        if (savedDefaults.value(forKey: "UserClear") != nil) {
+            let clear = savedDefaults.value(forKey: "UserClear") as? Bool
             if (clear!) {
-                self.performSegue(withIdentifier: "EnterClear", sender: self)
+                self.performSegue(withIdentifier: "MainToClear", sender: self)
             }
         }
 
-        // User has already submitted the form that day and is not clear; go tot he not clear screen
-        else if (savedDefaults.value(forKey: "FormSubmittedNotClear") != nil) {
-            let notclear = savedDefaults.value(forKey: "FormSubmittedNotClear") as? Bool
-            if (notclear!) {
-                self.performSegue(withIdentifier: "EnterNotClear", sender: self)
+        // User has already submitted the form that day and is not clear; go to not clear screen
+        else if (savedDefaults.value(forKey: "UserNotClear") != nil) {
+            let notClear = savedDefaults.value(forKey: "UserNotClear") as? Bool
+            if (notClear!) {
+                self.performSegue(withIdentifier: "MainToNotClear", sender: self)
             }
         }
 
         else {
-            self.performSegue(withIdentifier: "EnterToPrescreen", sender: self)
+            self.performSegue(withIdentifier: "MainToPrescreen", sender: self)
         }
+    }
+    
+    func showAlert() {
+        let savedDefaults = UserDefaults.standard
+    
+        let alert = UIAlertController(title: "Terms and Conditions", message: "Terms and conditions text here", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Accept", style: .cancel, handler:{ action in
+            savedDefaults.set("Accepted", forKey: "AcceptedTerms")
+        }))
+        alert.addAction(UIAlertAction(title: "Decline", style: .destructive, handler:{ action in
+            print("tapped decline")
+        }))
+        
+        present(alert,animated: true)
     }
     
     override func viewDidLoad() {
@@ -78,19 +96,19 @@ class ViewController: UIViewController {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
-        let currentdate = formatter.string(from: date)             // Produces a string like 01-01-2020
+        let currentDate = formatter.string(from: date)             // Produces a string like 01-01-2020
         
         // Check if there is a previous date saved
-        if (savedDefaults.value(forKey: "DateSubmitted") == nil || (savedDefaults.value(forKey: "DateSubmitted") as! String) != currentdate) {
+        if (savedDefaults.value(forKey: "DateSubmitted") == nil || (savedDefaults.value(forKey: "DateSubmitted") as! String) != currentDate) {
            
             // Dates are not the same, clear all previous date's data: Answers to questionnaire, clear/not clear screens, temp entered, date submitted
-            savedDefaults.removeObject(forKey: "FormSubmittedClear")
-            savedDefaults.removeObject(forKey: "FormSubmittedNotClear")
+            savedDefaults.removeObject(forKey: "UserClear")
+            savedDefaults.removeObject(forKey: "UserNotClear")
             savedDefaults.removeObject(forKey: "Q1Yes")
             savedDefaults.removeObject(forKey: "Q2Yes")
             savedDefaults.removeObject(forKey: "Q3Yes")
             savedDefaults.removeObject(forKey: "Q4Yes")
-            savedDefaults.removeObject(forKey: "TempEntered")
+            savedDefaults.removeObject(forKey: "Temperature")
             savedDefaults.removeObject(forKey: "DateSubmitted")
             savedDefaults.removeObject(forKey: "TimeSubmitted")
         }
@@ -103,6 +121,13 @@ class ViewController: UIViewController {
             logInButton.isHidden = false
         }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let savedDefaults = UserDefaults.standard
+        if (savedDefaults.value(forKey: "AcceptedTerms") == nil) {
+            showAlert()
+        }
     }
     
     

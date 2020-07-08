@@ -6,25 +6,24 @@
 //  Copyright © 2020 Helen Xiao. All rights reserved.
 //
 
-
 import UIKit
 import Firebase
-import GoogleSignIn
 import FirebaseAuth
 
 class InfoViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet weak var fullNameTitleLabel: UILabel!
+    @IBOutlet weak var emailAddressTitleLabel: UILabel!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var emailAddressLabel: UILabel!
     
     @IBAction func signOutTap(_ sender: Any) {
-        GIDSignIn.sharedInstance()?.signOut()
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            self.performSegue(withIdentifier: "signOutToMain", sender: self)
+            self.performSegue(withIdentifier: "SignOutSegue", sender: self)
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }
@@ -32,7 +31,7 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
    
     // Moves forward to questionnaire screen when "Continue" button is pressed
     @IBAction func continueButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "QuestionViewSegue", sender: self)
+        self.performSegue(withIdentifier: "InfoToPrescreen", sender: self)
     }
     
     override func viewDidLoad() {
@@ -44,6 +43,13 @@ class InfoViewController: UIViewController, UITextFieldDelegate {
         
         guard let username = Auth.auth().currentUser?.displayName else {return}
         guard let useremail = Auth.auth().currentUser?.email else {return}
+        
+        if (username == useremail) {
+            emailAddressLabel.isHidden = true
+            emailAddressTitleLabel.isHidden = true
+            fullNameTitleLabel.text = "Email"
+        }
+        
         fullNameLabel.text = username
         emailAddressLabel.text = useremail
     }

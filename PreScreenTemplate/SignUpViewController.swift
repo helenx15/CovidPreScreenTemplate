@@ -20,7 +20,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logInButton: UIButton!
     
     @IBAction func signUpPressed(_ sender: Any) {
-        let name = nameInput.text!
+        let name = nameInput.text!.trimmingCharacters(in: .whitespaces)
         let email = emailInput.text!
         let password = passwordInput.text!
         
