@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,39 +12,39 @@
             <objects>
                 <viewController id="TjZ-hJ-Ptg" customClass="SignUpViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Id-pw-6nF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-dj-UGp">
-                                <rect key="frame" x="50" y="279.5" width="182.5" height="29.5"/>
+                                <rect key="frame" x="50" y="311.5" width="182.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DLS Email:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RQF-Ev-gb8">
-                                <rect key="frame" x="50" y="189" width="203.5" height="29.5"/>
+                                <rect key="frame" x="50" y="214" width="203.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIZ-EQ-Vjv">
-                                <rect key="frame" x="72" y="32.5" width="270" height="45.5"/>
+                                <rect key="frame" x="221" y="39" width="270" height="54"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex. johnappleseed@dlshs.org" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-cS-Pjs">
-                                <rect key="frame" x="41.5" y="229.5" width="331" height="34"/>
+                                <rect key="frame" x="71" y="260" width="570" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Must be at least 6 characters" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgT-83-Xe2">
-                                <rect key="frame" x="41.5" y="320.5" width="331" height="34"/>
+                                <rect key="frame" x="71" y="358.5" width="570" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-Pg-DoO">
-                                <rect key="frame" x="40" y="389" width="334" height="50"/>
+                                <rect key="frame" x="40" y="430" width="632" height="50"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Sign Up">
@@ -55,23 +55,23 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An email has been sent to your email. Please verify your account to continue." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-EL-Nun">
-                                <rect key="frame" x="41.5" y="463.5" width="331" height="67.5"/>
+                                <rect key="frame" x="71" y="506" width="570" height="80.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Utf-J5-1iI">
-                                <rect key="frame" x="50" y="96" width="203.5" height="29.5"/>
+                                <rect key="frame" x="50" y="113" width="203.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex. John Appleseed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIB-c4-rh6">
-                                <rect key="frame" x="41.5" y="136.5" width="331" height="34"/>
+                                <rect key="frame" x="71" y="160" width="570" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcD-Jg-zj2">
-                                <rect key="frame" x="40" y="555.5" width="334" height="50"/>
+                                <rect key="frame" x="40" y="613" width="632" height="50"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Log In">
@@ -143,11 +143,11 @@
             <objects>
                 <viewController storyboardIdentifier="FirstScreen" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="400-u7-yxL">
-                                <rect key="frame" x="53" y="689.5" width="308" height="58"/>
+                                <rect key="frame" x="53" y="1077" width="918" height="88"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Enter">
@@ -161,13 +161,13 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DLSLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-rm-6fD">
-                                <rect key="frame" x="72.5" y="132.5" width="269" height="268.5"/>
+                                <rect key="frame" x="307" y="200.5" width="410" height="409.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hFc-rm-6fD" secondAttribute="height" multiplier="1:1" id="eVk-Ri-m6F"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2H-dY-fDh">
-                                <rect key="frame" x="41.5" y="466.5" width="331" height="107.5"/>
+                                <rect key="frame" x="102.5" y="724" width="819" height="163.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="De La Salle COVID-19 Screen">
                                         <attributes>
@@ -180,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCy-Wb-EFV">
-                                <rect key="frame" x="53" y="661" width="308" height="58"/>
+                                <rect key="frame" x="53" y="1018" width="918" height="88"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Log In">
@@ -194,7 +194,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jae-PI-tJC">
-                                <rect key="frame" x="53" y="727" width="308" height="58"/>
+                                <rect key="frame" x="53" y="1114" width="918" height="88.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Sign Up">
@@ -208,7 +208,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Please accept the terms and conditions before continuing." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-p5-Zdv">
-                                <rect key="frame" x="52" y="589" width="310.5" height="40.5"/>
+                                <rect key="frame" x="128" y="907" width="768" height="61.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -264,39 +264,39 @@
             <objects>
                 <viewController id="nEQ-17-Qf2" customClass="LogInViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jXP-ZL-nUa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZT-Zb-yaz">
-                                <rect key="frame" x="149.5" y="32.5" width="115" height="45.5"/>
+                                <rect key="frame" x="298.5" y="39" width="115" height="54"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DLS Email:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3go-0D-hRI">
-                                <rect key="frame" x="50" y="101" width="203.5" height="33.5"/>
+                                <rect key="frame" x="50" y="118.5" width="203.5" height="40.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKn-rn-8rH">
-                                <rect key="frame" x="50" y="212.5" width="182.5" height="33.5"/>
+                                <rect key="frame" x="50" y="241" width="182.5" height="40"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-6u-HWh">
-                                <rect key="frame" x="41.5" y="147.5" width="331" height="34"/>
+                                <rect key="frame" x="71" y="173" width="570" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-sz-DBW">
-                                <rect key="frame" x="41.5" y="257" width="331" height="34"/>
+                                <rect key="frame" x="71" y="292.5" width="570" height="34"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMB-hw-RpZ">
-                                <rect key="frame" x="40" y="328" width="334" height="50"/>
+                                <rect key="frame" x="40" y="367" width="632" height="50"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Log In">
@@ -307,7 +307,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXg-5m-DwZ">
-                                <rect key="frame" x="40" y="510.5" width="118" height="50"/>
+                                <rect key="frame" x="40" y="569.5" width="278" height="60"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
                                 <state key="normal" title="Sign Up">
@@ -324,7 +324,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-vM-SKk">
-                                <rect key="frame" x="256" y="510.5" width="118" height="50"/>
+                                <rect key="frame" x="394" y="569.5" width="278" height="60"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="26"/>
                                 <state key="normal" title="Reset Password">
@@ -341,7 +341,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email has not been verified. Another verification email has been sent." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2Q-m7-zQe">
-                                <rect key="frame" x="41.5" y="400.5" width="331" height="84"/>
+                                <rect key="frame" x="71" y="441" width="570" height="100.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -403,17 +403,17 @@
             <objects>
                 <viewController storyboardIdentifier="StudentInfoScreen" modalPresentationStyle="fullScreen" id="DMq-PU-ezD" customClass="InfoViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P7r-dQ-06L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DLSHelmet" translatesAutoresizingMaskIntoConstraints="NO" id="GCY-4D-A78">
-                                <rect key="frame" x="157.5" y="68.5" width="99" height="98.5"/>
+                                <rect key="frame" x="437" y="107" width="150" height="150.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GCY-4D-A78" secondAttribute="height" multiplier="1:1" id="U6e-HH-ub3"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ke0-Hd-WJB">
-                                <rect key="frame" x="53" y="672.5" width="308" height="58"/>
+                                <rect key="frame" x="53" y="1050" width="918" height="88.5"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="33"/>
                                 <state key="normal" title="Next">
@@ -427,27 +427,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ERs-gj-56F">
-                                <rect key="frame" x="41.5" y="264" width="331" height="36"/>
+                                <rect key="frame" x="102.5" y="397" width="819" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRZ-pb-ARE">
-                                <rect key="frame" x="41.5" y="192" width="331" height="49"/>
+                                <rect key="frame" x="102.5" y="291" width="819" height="75"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="krh-Cy-V0r">
-                                <rect key="frame" x="41.5" y="381.5" width="331" height="35.5"/>
+                                <rect key="frame" x="102.5" y="566.5" width="819" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6H-Ha-s3F">
-                                <rect key="frame" x="145" y="594.5" width="124" height="35"/>
+                                <rect key="frame" x="358.5" y="933.5" width="307" height="53.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                 <state key="normal" title="Sign Out">
-                                    <color key="titleColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
@@ -457,13 +457,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="pyu-06-I0D">
-                                <rect key="frame" x="41.5" y="315.5" width="331" height="36"/>
+                                <rect key="frame" x="102.5" y="471" width="819" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Hno-kM-iZC">
-                                <rect key="frame" x="41.5" y="430.5" width="331" height="35.5"/>
+                                <rect key="frame" x="102.5" y="637" width="819" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -526,11 +526,11 @@
             <objects>
                 <viewController storyboardIdentifier="questionscreen" modalPresentationStyle="fullScreen" id="UkE-dm-dQD" customClass="PreScreenViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LXv-xq-UtL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpI-jY-zXR">
-                                <rect key="frame" x="20" y="47.5" width="132.5" height="24"/>
+                                <rect key="frame" x="49.5" y="74" width="327.5" height="37"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                                 <state key="normal" title="View My Info">
@@ -544,24 +544,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-v1-azH">
-                                <rect key="frame" x="85.5" y="79" width="243" height="46.5"/>
+                                <rect key="frame" x="390.5" y="123.5" width="243" height="71"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Do you have a fever?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pH-jW-Z50">
-                                <rect key="frame" x="31" y="158" width="352" height="30"/>
+                                <rect key="frame" x="77" y="235.5" width="870" height="45.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2GZ-rq-EHc">
-                                <rect key="frame" x="155" y="212" width="61.5" height="29"/>
+                                <rect key="frame" x="315.5" y="313.5" width="61.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rL-ei-ViX">
-                                <rect key="frame" x="98" y="204" width="45" height="45"/>
+                                <rect key="frame" x="230.5" y="301" width="68.5" height="68.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2rL-ei-ViX" secondAttribute="height" multiplier="1:1" id="SAi-Vf-YNd"/>
@@ -573,12 +573,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-cL-fbQ">
-                                <rect key="frame" x="295" y="212" width="52.5" height="29"/>
+                                <rect key="frame" x="662.5" y="313.5" width="52.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN5-kN-3jG">
-                                <rect key="frame" x="238" y="204" width="45" height="45"/>
+                                <rect key="frame" x="577" y="301" width="68" height="68.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DN5-kN-3jG" secondAttribute="height" multiplier="1:1" id="ZR6-7O-pmg"/>
@@ -590,24 +590,24 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temperature (°F), if taken" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwS-dj-tER">
-                                <rect key="frame" x="62" y="264" width="290" height="27"/>
+                                <rect key="frame" x="153.5" y="391" width="717" height="41"/>
                                 <color key="tintColor" red="0.1333333333" green="0.36078431370000003" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.1333333333" green="0.36078431370000003" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Do you have a cough?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLD-RI-dha">
-                                <rect key="frame" x="31" y="302.5" width="352" height="30"/>
+                                <rect key="frame" x="77" y="445" width="870" height="46"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGG-uz-004">
-                                <rect key="frame" x="155" y="358" width="61.5" height="28.5"/>
+                                <rect key="frame" x="315.5" y="525" width="61.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXR-Zz-Hpf">
-                                <rect key="frame" x="98" y="350" width="45" height="45"/>
+                                <rect key="frame" x="230.5" y="513" width="68.5" height="68.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TXR-Zz-Hpf" secondAttribute="height" multiplier="1:1" id="p3X-QJ-K23"/>
@@ -619,12 +619,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OGj-4J-60N">
-                                <rect key="frame" x="292" y="358" width="52.5" height="28.5"/>
+                                <rect key="frame" x="656" y="525" width="52.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flg-fd-tON">
-                                <rect key="frame" x="238" y="350" width="45" height="45"/>
+                                <rect key="frame" x="577" y="513" width="68" height="68.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Flg-fd-tON" secondAttribute="height" multiplier="1:1" id="wIg-oU-BlG"/>
@@ -636,12 +636,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Do you have shortness of breath?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogf-34-dBC">
-                                <rect key="frame" x="31" y="414.5" width="328.5" height="60"/>
+                                <rect key="frame" x="77" y="608" width="810.5" height="45.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t79-tl-J82">
-                                <rect key="frame" x="98" y="491" width="45" height="45"/>
+                                <rect key="frame" x="230.5" y="673.5" width="68.5" height="68.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t79-tl-J82" secondAttribute="height" multiplier="1:1" id="pWt-0Q-M86"/>
@@ -653,7 +653,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eib-Lx-kh0">
-                                <rect key="frame" x="238" y="491" width="45" height="45"/>
+                                <rect key="frame" x="577" y="673.5" width="68" height="68.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eib-Lx-kh0" secondAttribute="height" multiplier="1:1" id="3Z4-bU-c2f"/>
@@ -665,17 +665,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGU-R6-OMM">
-                                <rect key="frame" x="153" y="502" width="61.5" height="28.5"/>
+                                <rect key="frame" x="311" y="689" width="61.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iix-7w-QvD">
-                                <rect key="frame" x="295" y="502" width="52.5" height="28.5"/>
+                                <rect key="frame" x="662.5" y="689" width="52.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ry1-Iy-kOM">
-                                <rect key="frame" x="31" y="556" width="352" height="90"/>
+                                <rect key="frame" x="77" y="763" width="870" height="91.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="4. Have you recently come into contact with anyone that has tested positive for COVID-19?">
                                         <attributes>
@@ -687,7 +687,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-p1-TG7">
-                                <rect key="frame" x="98" y="663.5" width="45" height="44.5"/>
+                                <rect key="frame" x="230.5" y="875" width="68.5" height="68"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lYc-p1-TG7" secondAttribute="height" multiplier="1:1" id="kdD-U9-jb8"/>
@@ -699,7 +699,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Na-K6-Ike">
-                                <rect key="frame" x="238" y="663.5" width="45" height="44.5"/>
+                                <rect key="frame" x="577" y="875" width="68" height="68"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Na-K6-Ike" secondAttribute="height" multiplier="1:1" id="AWw-Lg-AfU"/>
@@ -711,7 +711,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btL-yJ-knN">
-                                <rect key="frame" x="53" y="778" width="308" height="58"/>
+                                <rect key="frame" x="53" y="1200.5" width="918" height="88.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                 <state key="normal" title="Submit">
@@ -725,23 +725,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALl-HY-SwZ">
-                                <rect key="frame" x="153" y="671.5" width="61.5" height="28.5"/>
+                                <rect key="frame" x="311" y="886" width="61.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jh-sS-iTJ">
-                                <rect key="frame" x="295" y="671.5" width="52.5" height="28.5"/>
+                                <rect key="frame" x="662.5" y="886" width="52.5" height="43.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Please answer all questions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDC-D5-6Ev">
-                                <rect key="frame" x="31" y="132" width="352" height="22"/>
+                                <rect key="frame" x="77" y="200.5" width="870" height="33.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-tH-KQ1">
-                                <rect key="frame" x="41.5" y="844" width="331" height="30"/>
+                                <rect key="frame" x="102.5" y="1297" width="819" height="45.5"/>
                                 <state key="normal" title="COVID-19 Symptoms"/>
                                 <connections>
                                     <action selector="covidLink:" destination="UkE-dm-dQD" eventType="touchUpInside" id="yuD-RQ-Jeh"/>
@@ -895,11 +895,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="WHt-mV-ue8" customClass="ClearViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HeO-Fm-tbM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r00-cB-klY">
-                                <rect key="frame" x="124" y="790.5" width="166" height="30"/>
+                                <rect key="frame" x="307" y="1234" width="410" height="46"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
                                 <state key="normal" title="Resubmit Form">
@@ -913,43 +913,43 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show this pass when you get to school" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uIq-NR-IBQ">
-                                <rect key="frame" x="52" y="162" width="310.5" height="73"/>
+                                <rect key="frame" x="128" y="247" width="768" height="111"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLEAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q03-za-2FJ">
-                                <rect key="frame" x="41.5" y="266.5" width="331" height="116.5"/>
+                                <rect key="frame" x="102.5" y="402" width="819" height="177.5"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="120"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kID-iH-OBH">
-                                <rect key="frame" x="31" y="511.5" width="352" height="40.5"/>
+                                <rect key="frame" x="77" y="766" width="870" height="61.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This pass is valid until 11:59PM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYt-bj-Alz">
-                                <rect key="frame" x="49" y="742.5" width="316" height="30"/>
+                                <rect key="frame" x="121" y="1165" width="782" height="46"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Nw-FP-yI6">
-                                <rect key="frame" x="31" y="420" width="352" height="54"/>
+                                <rect key="frame" x="77" y="631.5" width="870" height="82"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're good to go!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZd-IL-I7Z">
-                                <rect key="frame" x="31" y="74" width="352" height="35.5"/>
+                                <rect key="frame" x="77" y="115" width="870" height="55"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUN-2c-sXE">
-                                <rect key="frame" x="31" y="594.5" width="352" height="40"/>
+                                <rect key="frame" x="77" y="887" width="870" height="61.5"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1009,34 +1009,34 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="pEY-nU-uDH" customClass="NotClearViewController" customModule="PreScreenTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eaJ-as-Nk2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYC-5R-6Q2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-iy-LvV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="825.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1158.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You answered &quot;Yes&quot; to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fo8-pc-lm6">
-                                                <rect key="frame" x="41.5" y="30" width="331" height="31"/>
+                                                <rect key="frame" x="102.5" y="30" width="819" height="51"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-xF-P1X">
-                                                <rect key="frame" x="41.5" y="61" width="331" height="0.0"/>
+                                                <rect key="frame" x="102.5" y="81" width="819" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If this is incorrect," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yY9-eT-6u9">
-                                                <rect key="frame" x="41.5" y="61" width="331" height="21"/>
+                                                <rect key="frame" x="102.5" y="81" width="819" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-Se-fTU">
-                                                <rect key="frame" x="165.5" y="92" width="83" height="30"/>
+                                                <rect key="frame" x="409.5" y="125.5" width="205" height="49.5"/>
                                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
                                                 <state key="normal" title="Go Back">
@@ -1050,61 +1050,61 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please call the COVID hotline:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPH-xZ-QY6">
-                                                <rect key="frame" x="20.5" y="152" width="373" height="28.5"/>
+                                                <rect key="frame" x="51" y="205" width="922" height="47"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for secondary screening" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-rc-MfP">
-                                                <rect key="frame" x="20.5" y="359.5" width="373" height="28.5"/>
+                                                <rect key="frame" x="51" y="507.5" width="922" height="47"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCL-EA-iYc">
-                                                <rect key="frame" x="31" y="418" width="352" height="49"/>
+                                                <rect key="frame" x="77" y="584.5" width="870" height="80.5"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-Hl-mfK">
-                                                <rect key="frame" x="31" y="487" width="352" height="37"/>
+                                                <rect key="frame" x="77" y="685" width="870" height="61"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are already on campus,  please report to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfZ-7L-UY7">
-                                                <rect key="frame" x="20.5" y="610.5" width="373" height="57.5"/>
+                                                <rect key="frame" x="51" y="856.5" width="922" height="94"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="925-288-8221" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-Qc-mym">
-                                                <rect key="frame" x="31" y="190.5" width="352" height="45"/>
+                                                <rect key="frame" x="77" y="262" width="870" height="74"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="80"/>
                                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or, send an email to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1Q-Hh-r6d">
-                                                <rect key="frame" x="20.5" y="255.5" width="373" height="29"/>
+                                                <rect key="frame" x="51" y="356" width="922" height="47.5"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athletic Training Room" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAi-6O-FoD">
-                                                <rect key="frame" x="41.5" y="683" width="331" height="49"/>
+                                                <rect key="frame" x="102.5" y="965.5" width="819" height="81"/>
                                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="50"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for secondary screening" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwF-lW-UBs">
-                                                <rect key="frame" x="20.5" y="747" width="373" height="28.5"/>
+                                                <rect key="frame" x="51" y="1061.5" width="922" height="47"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0KM-Um-jmT">
-                                                <rect key="frame" x="31" y="544" width="352" height="36.5"/>
+                                                <rect key="frame" x="77" y="766" width="870" height="60.5"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
                                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="covid19@dlshs.org" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cq-9E-slb">
-                                                <rect key="frame" x="31" y="294.5" width="352" height="45"/>
+                                                <rect key="frame" x="77" y="413.5" width="870" height="74"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="80"/>
                                                 <color key="textColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1209,11 +1209,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bre-r1-uha"/>
-        <segue reference="hr8-S9-UbP"/>
-        <segue reference="NO5-IG-vMG"/>
-        <segue reference="Idc-3X-GkN"/>
-        <segue reference="dgj-OI-J0b"/>
+        <segue reference="Dfr-nD-yQq"/>
+        <segue reference="fdI-wq-Gke"/>
+        <segue reference="f1h-iQ-A81"/>
+        <segue reference="DZI-q5-7Cs"/>
+        <segue reference="fGP-kJ-Du6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DLSHelmet" width="166" height="145.5"/>

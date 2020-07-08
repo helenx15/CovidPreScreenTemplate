@@ -76,8 +76,8 @@ class NotClearViewController: UIViewController {
         }
         
         if (question1 == "" && question2 == "" && question3 == "" && question4 == "") {
-                   yesQuestionsLabel.text = "\n" + "None" + "\n"
-               }
+            yesQuestionsLabel.text = "\n" + "None" + "\n"
+        }
         
         else {
         

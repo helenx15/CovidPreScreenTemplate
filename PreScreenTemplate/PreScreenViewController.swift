@@ -216,14 +216,14 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             savedDefaults.set(timestamp, forKey: "TimeSubmitted")
             
             var root = ""
-            let adjustedemail = userEmail.replacingOccurrences(of: ".", with: ",")
+            let adjustedEmail = userEmail.replacingOccurrences(of: ".", with: ",")
             
             // For those added manually
             if (userEmail == userName) {
-                root = adjustedemail
+                root = adjustedEmail
             }
             else {
-                root = userName + "; " + adjustedemail
+                root = userName + "; " + adjustedEmail
             }
             
             self.ref.child(root).child(currentDate).child("question1").setValue(q1Answer)
