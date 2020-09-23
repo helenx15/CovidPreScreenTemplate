@@ -14,13 +14,20 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
         
     @IBOutlet weak var viewMyInfoButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var temperatureInput: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     @IBOutlet weak var question1Prompt: UILabel!
     @IBOutlet weak var question2Prompt: UILabel!
     @IBOutlet weak var question3Prompt: UILabel!
     @IBOutlet weak var question4Prompt: UILabel!
+    @IBOutlet weak var question5Prompt: UILabel!
+    @IBOutlet weak var question6Prompt: UILabel!
+    @IBOutlet weak var question7Prompt: UILabel!
+    @IBOutlet weak var question8Prompt: UILabel!
+    @IBOutlet weak var question9Prompt: UILabel!
+    @IBOutlet weak var question10Prompt: UILabel!
+    @IBOutlet weak var question11Prompt: UILabel!
+
     // INSERT ADDITIONAL QUESTIONS HERE
     
     @IBOutlet weak var question1Yes: UIButton!
@@ -31,6 +38,21 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var question3No: UIButton!
     @IBOutlet weak var question4Yes: UIButton!
     @IBOutlet weak var question4No: UIButton!
+    @IBOutlet weak var question5Yes: UIButton!
+    @IBOutlet weak var question5No: UIButton!
+    @IBOutlet weak var question6Yes: UIButton!
+    @IBOutlet weak var question6No: UIButton!
+    @IBOutlet weak var question7Yes: UIButton!
+    @IBOutlet weak var question7No: UIButton!
+    @IBOutlet weak var question8Yes: UIButton!
+    @IBOutlet weak var question8No: UIButton!
+    @IBOutlet weak var question9Yes: UIButton!
+    @IBOutlet weak var question9No: UIButton!
+    @IBOutlet weak var question10Yes: UIButton!
+    @IBOutlet weak var question10No: UIButton!
+    @IBOutlet weak var question11Yes: UIButton!
+    @IBOutlet weak var question11No: UIButton!
+
     // INSERT ADDITIONAL QUESTIONS HERE
     
     var ref: DatabaseReference!
@@ -127,6 +149,168 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                }
     }
     
+// Radio buttons for Question 5
+    @IBAction func question5YesSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question5No.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question5No.isSelected = false
+               }
+    }
+    
+    @IBAction func question5NoSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question5Yes.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question5Yes.isSelected = false
+               }
+    }
+ 
+// Radio buttons for Question 6
+    @IBAction func question6YesSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question6No.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question6No.isSelected = false
+               }
+    }
+    
+    @IBAction func question6NoSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question6Yes.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question6Yes.isSelected = false
+               }
+    }
+    
+// Radio buttons for Question 7
+    @IBAction func question7YesSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question7No.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question7No.isSelected = false
+               }
+    }
+    
+    @IBAction func question7NoSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question7Yes.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question7Yes.isSelected = false
+               }
+    }
+    
+// Radio buttons for Question 8
+    @IBAction func question8YesSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question8No.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question8No.isSelected = false
+               }
+    }
+    
+    @IBAction func question8NoSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question8Yes.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question8Yes.isSelected = false
+               }
+    }
+    
+// Radio buttons for Question 9
+    @IBAction func question9YesSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question9No.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question9No.isSelected = false
+               }
+    }
+    
+    @IBAction func question9NoSelected(_ sender: UIButton) {
+        if sender.isSelected {
+                   sender.isSelected = false
+                   question9Yes.isSelected = false
+               }
+               else {
+                   sender.isSelected = true
+                   question9Yes.isSelected = false
+               }
+    }
+    
+    // Radio buttons for Question 10
+       @IBAction func question10YesSelected(_ sender: UIButton) {
+           if sender.isSelected {
+               sender.isSelected = false
+               question10No.isSelected = false
+           }
+           else {
+               sender.isSelected = true
+               question10No.isSelected = false
+           }
+       }
+       
+       @IBAction func question10NoSelected(_ sender: UIButton) {
+           if sender.isSelected {
+               sender.isSelected = false
+               question10Yes.isSelected = false
+           }
+           else {
+               sender.isSelected = true
+               question10Yes.isSelected = false
+           }
+       }
+    
+    // Radio buttons for Question 11
+       @IBAction func question11YesSelected(_ sender: UIButton) {
+           if sender.isSelected {
+               sender.isSelected = false
+               question11No.isSelected = false
+           }
+           else {
+               sender.isSelected = true
+               question11No.isSelected = false
+           }
+       }
+       
+       @IBAction func question11NoSelected(_ sender: UIButton) {
+           if sender.isSelected {
+               sender.isSelected = false
+               question11Yes.isSelected = false
+           }
+           else {
+               sender.isSelected = true
+               question11Yes.isSelected = false
+           }
+       }
+    
+    
     @IBAction func covidLink(_ sender: Any) {
            UIApplication.shared.open(URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fsymptoms.html")! as URL, options: [:], completionHandler: nil)
        }
@@ -140,9 +324,6 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
         
         // Info for Clear Screen
         if segue.identifier == "ClearSegue" {
-            if (temperatureInput.text! != "") {
-                savedDefaults.set(temperatureInput.text!, forKey: "Temperature")
-            }
             savedDefaults.set(true, forKey: "UserClear")
         }
         
@@ -164,8 +345,33 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             {
                 savedDefaults.set(question4Prompt.text!, forKey: "Q4Yes")
             }
-            if (temperatureInput.text! != "") {
-                savedDefaults.set(temperatureInput.text!, forKey: "Temperature")
+            if (question5Yes.isSelected)
+            {
+                savedDefaults.set(question5Prompt.text!, forKey: "Q5Yes")
+            }
+            if (question6Yes.isSelected)
+            {
+                savedDefaults.set(question6Prompt.text!, forKey: "Q6Yes")
+            }
+            if (question7Yes.isSelected)
+            {
+                savedDefaults.set(question7Prompt.text!, forKey: "Q7Yes")
+            }
+            if (question8Yes.isSelected)
+            {
+                savedDefaults.set(question8Prompt.text!, forKey: "Q8Yes")
+            }
+            if (question9Yes.isSelected)
+            {
+                savedDefaults.set(question9Prompt.text!, forKey: "Q9Yes")
+            }
+            if (question10Yes.isSelected)
+            {
+                savedDefaults.set(question10Prompt.text!, forKey: "Q10Yes")
+            }
+            if (question11Yes.isSelected)
+            {
+                savedDefaults.set(question11Prompt.text!, forKey: "Q11Yes")
             }
             savedDefaults.set(true, forKey: "UserNotClear")
         }
@@ -176,21 +382,20 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             guard let userName = Auth.auth().currentUser?.displayName else {return}
             guard let userEmail = Auth.auth().currentUser?.email else {return}
             
-            var feverTemp = ""
             var q1Answer = "No"
             var q2Answer = "No"
             var q3Answer = "No"
             var q4Answer = "No"
-            
-            if (savedDefaults.value(forKey: "Temperature") != nil) {
-                feverTemp = (savedDefaults.value(forKey: "Temperature") as? String)! + " °F"
-            }
+            var q5Answer = "No"
+            var q6Answer = "No"
+            var q7Answer = "No"
+            var q8Answer = "No"
+            var q9Answer = "No"
+            var q10Answer = "No"
+            var q11Answer = "No"
             
             if (question1Yes.isSelected) {
                 q1Answer = "Yes"
-            }
-            if (feverTemp != "") {
-                q1Answer = q1Answer + " " + feverTemp
             }
             if (question2Yes.isSelected) {
                 q2Answer = "Yes"
@@ -200,6 +405,27 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             }
             if (question4Yes.isSelected) {
                 q4Answer = "Yes"
+            }
+            if (question5Yes.isSelected) {
+                q5Answer = "Yes"
+            }
+            if (question6Yes.isSelected) {
+                q6Answer = "Yes"
+            }
+            if (question7Yes.isSelected) {
+                q7Answer = "Yes"
+            }
+            if (question8Yes.isSelected) {
+                q8Answer = "Yes"
+            }
+            if (question9Yes.isSelected) {
+                q9Answer = "Yes"
+            }
+            if (question10Yes.isSelected) {
+                q10Answer = "Yes"
+            }
+            if (question11Yes.isSelected) {
+                q11Answer = "Yes"
             }
             
             // Date and Time info
@@ -226,11 +452,31 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                 root = userName + "; " + adjustedEmail
             }
             
-            self.ref.child(root).child(currentDate).child("question1").setValue(q1Answer)
-            self.ref.child(root).child(currentDate).child("question2").setValue(q2Answer)
-            self.ref.child(root).child(currentDate).child("question3").setValue(q3Answer)
-            self.ref.child(root).child(currentDate).child("question4").setValue(q4Answer)
-            self.ref.child(root).child(currentDate).child("timestamp").setValue(timestamp)
+            self.ref.child(root).child(currentDate).child("COVID Contact").setValue(q1Answer)
+            self.ref.child(root).child(currentDate).child("Fever").setValue(q2Answer)
+            self.ref.child(root).child(currentDate).child("Cough or Sore Throat").setValue(q3Answer)
+            self.ref.child(root).child(currentDate).child("Shortness of Breath").setValue(q4Answer)
+            self.ref.child(root).child(currentDate).child("Chills").setValue(q5Answer)
+            self.ref.child(root).child(currentDate).child("Muscle Pain").setValue(q6Answer)
+            self.ref.child(root).child(currentDate).child("Headache").setValue(q7Answer)
+            self.ref.child(root).child(currentDate).child("Nausia or Vomiting or Diarrhea").setValue(q8Answer)
+            self.ref.child(root).child(currentDate).child("Loss of Taste or Smell").setValue(q9Answer)
+            self.ref.child(root).child(currentDate).child("Fatigue").setValue(q10Answer)
+            self.ref.child(root).child(currentDate).child("Congestion or Runny Nose").setValue(q11Answer)
+            self.ref.child(root).child(currentDate).child("Timestamp").setValue(timestamp)
+            
+            self.ref.child(currentDate).child(root).child("COVID Contact").setValue(q1Answer)
+            self.ref.child(currentDate).child(root).child("Fever").setValue(q2Answer)
+            self.ref.child(currentDate).child(root).child("Cough or Sore Throat").setValue(q3Answer)
+            self.ref.child(currentDate).child(root).child("Shortness of Breath").setValue(q4Answer)
+            self.ref.child(currentDate).child(root).child("Chills").setValue(q5Answer)
+            self.ref.child(currentDate).child(root).child("Muscle Pain").setValue(q6Answer)
+            self.ref.child(currentDate).child(root).child("Headache").setValue(q7Answer)
+            self.ref.child(currentDate).child(root).child("Nausia or Vomiting or Diarrhea").setValue(q8Answer)
+            self.ref.child(currentDate).child(root).child("Loss of Taste or Smell").setValue(q9Answer)
+            self.ref.child(currentDate).child(root).child("Fatigue").setValue(q10Answer)
+            self.ref.child(currentDate).child(root).child("Congestion or Runny Nose").setValue(q11Answer)
+            self.ref.child(currentDate).child(root).child("timestamp").setValue(timestamp)
         }
     }
     
@@ -238,21 +484,18 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitButtonPressed(_ sender: Any) {
         
         // Checks if all questions have been answered
-        if ((question1Yes.isSelected || question1No.isSelected) && (question2Yes.isSelected || question2No.isSelected) && (question3Yes.isSelected || question3No.isSelected) && (question4Yes.isSelected || question4No.isSelected))
+        if ((question1Yes.isSelected || question1No.isSelected) && (question2Yes.isSelected || question2No.isSelected) && (question3Yes.isSelected || question3No.isSelected) && (question4Yes.isSelected || question4No.isSelected) && (question5Yes.isSelected || question5No.isSelected) && (question6Yes.isSelected || question6No.isSelected) && (question7Yes.isSelected || question7No.isSelected) && (question8Yes.isSelected || question8No.isSelected) && (question9Yes.isSelected || question9No.isSelected) && (question10Yes.isSelected || question10No.isSelected) && (question11Yes.isSelected || question11No.isSelected))
         {
             // All questions answered
-        
-            // Get the temperature
-            let temperatureInt = Double(temperatureInput.text!)
             
-            // CLEAR: Qs 2-4 No + No fever / Fever < 100.4
+            // CLEAR: Qs 1-9 No
             
-            if ((question2No.isSelected && question3No.isSelected && question4No.isSelected) && ((question1No.isSelected) && (temperatureInput.text! == "" || temperatureInt!.isLess(than: 100.4))))
+            if (question1No.isSelected && question2No.isSelected && question3No.isSelected && question4No.isSelected && question5No.isSelected && question6No.isSelected && question7No.isSelected && question8No.isSelected && question9No.isSelected && question10No.isSelected && question11No.isSelected)
             {
                 self.performSegue(withIdentifier: "ClearSegue", sender: self)
             }
             
-            // NOT CLEAR: At least 1 Q answered yes / fever >= 100.4
+            // NOT CLEAR: At least 1 Q answered yes
             else {
                 self.performSegue(withIdentifier: "NotClearSegue", sender: self)
             }
@@ -270,16 +513,16 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "ViewInfo", sender: self)
     }
     
-    // Closes keyboard when user touches outside of the keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-       
-    // Closes keyboard when user touches return key (Not present in decimal keyboard, but keeping in case switch back)
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+//    // Closes keyboard when user touches outside of the keyboard
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
+//
+//    // Closes keyboard when user touches return key (Not present in decimal keyboard, but keeping in case switch back)
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -288,7 +531,6 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
 
         ref = Database.database().reference()
         
-        temperatureInput.delegate = self
         viewMyInfoButton.layer.cornerRadius = 10.0
         submitButton.layer.cornerRadius = 20.0
     }

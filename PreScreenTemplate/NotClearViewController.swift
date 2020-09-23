@@ -20,11 +20,19 @@ class NotClearViewController: UIViewController {
     
     var temperatureRecorded = String()
     
-    var question1 = String()
-    var question2 = String()
-    var question3 = String()
-    var question4 = String()
-    // INSERT ADDITIONAL QUESTIONS
+    // TODO: Change based on # of questions
+    var question1 = ""
+    var question2 = ""
+    var question3 = ""
+    var question4 = ""
+    var question5 = ""
+    var question6 = ""
+    var question7 = ""
+    var question8 = ""
+    var question9 = ""
+    var question10 = ""
+    var question11 = ""
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Clear all saved data before going back to questionnaire screen
@@ -34,7 +42,13 @@ class NotClearViewController: UIViewController {
         savedDefaults.removeObject(forKey: "Q2Yes")
         savedDefaults.removeObject(forKey: "Q3Yes")
         savedDefaults.removeObject(forKey: "Q4Yes")
-        savedDefaults.removeObject(forKey: "Temperature")
+        savedDefaults.removeObject(forKey: "Q5Yes")
+        savedDefaults.removeObject(forKey: "Q6Yes")
+        savedDefaults.removeObject(forKey: "Q7Yes")
+        savedDefaults.removeObject(forKey: "Q8Yes")
+        savedDefaults.removeObject(forKey: "Q9Yes")
+        savedDefaults.removeObject(forKey: "Q10Yes")
+        savedDefaults.removeObject(forKey: "Q11Yes")
         savedDefaults.removeObject(forKey: "DateSubmitted")
         savedDefaults.removeObject(forKey: "TimeSubmitted")
     }
@@ -71,12 +85,30 @@ class NotClearViewController: UIViewController {
         if (savedDefaults.value(forKey: "Q4Yes") != nil) {
             question4 = (savedDefaults.value(forKey: "Q4Yes") as? String)!
         }
-        if (savedDefaults.value(forKey: "Temperature") != nil) {
-            temperatureRecorded = (savedDefaults.value(forKey: "Temperature") as? String)!
+        if (savedDefaults.value(forKey: "Q5Yes") != nil) {
+            question5 = (savedDefaults.value(forKey: "Q5Yes") as? String)!
+        }
+        if (savedDefaults.value(forKey: "Q6Yes") != nil) {
+            question6 = (savedDefaults.value(forKey: "Q6Yes") as? String)!
+        }
+        if (savedDefaults.value(forKey: "Q7Yes") != nil) {
+            question7 = (savedDefaults.value(forKey: "Q7Yes") as? String)!
+        }
+        if (savedDefaults.value(forKey: "Q8Yes") != nil) {
+            question8 = (savedDefaults.value(forKey: "Q8Yes") as? String)!
+        }
+        if (savedDefaults.value(forKey: "Q9Yes") != nil) {
+            question9 = (savedDefaults.value(forKey: "Q9Yes") as? String)!
+        }
+        if (savedDefaults.value(forKey: "Q10Yes") != nil) {
+            question10 = (savedDefaults.value(forKey: "Q10Yes") as? String)!
+        }
+        if (savedDefaults.value(forKey: "Q11Yes") != nil) {
+            question11 = (savedDefaults.value(forKey: "Q11Yes") as? String)!
         }
         
-        if (question1 == "" && question2 == "" && question3 == "" && question4 == "") {
-            yesQuestionsLabel.text = "\n" + "None" + "\n"
+        if (question1 == "" && question2 == "" && question3 == "" && question4 == "" && question5 == "" && question6 == "" && question7 == "" && question8 == "" && question9 == "" && question10 == "" && question11 == "") {
+                   yesQuestionsLabel.text = "\n" + "None" + "\n"
         }
         
         else {
@@ -93,6 +125,27 @@ class NotClearViewController: UIViewController {
             }
             if (question4 != "") {
                 yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question4 + "\n"
+            }
+            if (question5 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question5 + "\n"
+            }
+            if (question6 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question6 + "\n"
+            }
+            if (question7 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question7 + "\n"
+            }
+            if (question8 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question8 + "\n"
+            }
+            if (question9 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question9 + "\n"
+            }
+            if (question10 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question10 + "\n"
+            }
+            if (question11 != "") {
+                yesQuestionsLabel.text = yesQuestionsLabel.text! + "\n" + question11 + "\n"
             }
         }
         
