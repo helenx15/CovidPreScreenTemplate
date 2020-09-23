@@ -19,7 +19,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
     
+    
     @IBAction func signUpPressed(_ sender: Any) {
+        
         let name = nameInput.text!.trimmingCharacters(in: .whitespaces)
         let email = emailInput.text!
         let password = passwordInput.text!
@@ -27,15 +29,16 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         if (name == nil || email == nil || password == nil || name == "" || email == "" || password == "") {
             self.signUpLabel.text = "Please fill out all entries."
             self.signUpLabel.isHidden = false
+        } else if (!name.contains(" ")){
+            self.signUpLabel.text = "Please enter your first and last name."
+            self.signUpLabel.isHidden = false
+        //TODO: Replace with school
+//        } else if (email.suffix(14) != "@servitehs.org") {
+//            self.signUpLabel.text = "Please sign up with a Servite email."
+//            self.signUpLabel.isHidden = false
         } else if (password.count < 6) {
             self.signUpLabel.text = "Your password needs to be at least 6 characters."
             self.signUpLabel.isHidden = false
-            
-        // CHANGE WITH SCHOOL
-//        } else if (email.suffix(10) != "@dlshs.org") {
-//            self.signUpLabel.text = "Please sign up with a INSERT SCHOOL NAME Email."
-//            self.signUpLabel.isHidden = false
-            
         } else {
             // TODO: CHECK IF EMAIL ENDS IN DLS
             self.signUpLabel.text = "Please wait while we create your account..."
