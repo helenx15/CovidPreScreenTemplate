@@ -30,12 +30,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             self.logInLabel.text = ""
             self.logInLabel.isHidden = false
             
+            // Signs a user in if one exists
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if (error != nil) {
                     self.logInLabel.text = "Invalid email and password credentials. Try again, or:"
                     self.resetPasswordButton.isHidden = false
                     self.signUpButton.isHidden = false
                 }
+                // User exists
                 else {
                     if (Auth.auth().currentUser?.isEmailVerified == true ) {
                         if (Auth.auth().currentUser?.email == nil || Auth.auth().currentUser?.email == "") {
@@ -70,6 +72,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "LogInToSignUp", sender: self)
     }
     
+    // Sends a reset password email to the email
     @IBAction func resetPasswordPressed(_ sender: Any) {
         let email = emailInput.text!
         Auth.auth().sendPasswordReset(withEmail: email) { error in
