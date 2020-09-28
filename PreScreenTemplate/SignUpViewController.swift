@@ -33,14 +33,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             self.signUpLabel.text = "Please enter your first and last name."
             self.signUpLabel.isHidden = false
         //TODO: Replace with school
-//        } else if (email.suffix(14) != "@servitehs.org") {
-//            self.signUpLabel.text = "Please sign up with a Servite email."
+//        } else if (email.suffix(14) != "@schoolemailending.org") {
+//            self.signUpLabel.text = "Please sign up with a INSERT SCHOOL NAME HERE email."
 //            self.signUpLabel.isHidden = false
         } else if (password.count < 6) {
             self.signUpLabel.text = "Your password needs to be at least 6 characters."
             self.signUpLabel.isHidden = false
         } else {
-            // TODO: CHECK IF EMAIL ENDS IN DLS
             self.signUpLabel.text = "Please wait while we create your account..."
             self.signUpLabel.isHidden = false
             

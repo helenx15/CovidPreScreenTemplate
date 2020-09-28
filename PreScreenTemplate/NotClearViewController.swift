@@ -20,7 +20,7 @@ class NotClearViewController: UIViewController {
     
     var temperatureRecorded = String()
     
-    // TODO: Change based on # of questions
+    //  TODO: Change depending on # of questions
     var question1 = ""
     var question2 = ""
     var question3 = ""
@@ -36,6 +36,8 @@ class NotClearViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Clear all saved data before going back to questionnaire screen
+        //  TODO: Change depending on # of questions
+
         let savedDefaults = UserDefaults.standard
         savedDefaults.removeObject(forKey: "UserNotClear")
         savedDefaults.removeObject(forKey: "Q1Yes")
@@ -64,12 +66,12 @@ class NotClearViewController: UIViewController {
         // Do any additional setup after loading the view.
         goBackButton.layer.cornerRadius = 10.0
         
-        
         let userName = Auth.auth().currentUser?.displayName
         if (userName != nil){
             nameLabel.text = userName
         }
         
+        //  TODO: Change depending on # of questions
         // Load saved data from app for questions answered yes + temperature
         let savedDefaults = UserDefaults.standard
         
@@ -107,13 +109,17 @@ class NotClearViewController: UIViewController {
             question11 = (savedDefaults.value(forKey: "Q11Yes") as? String)!
         }
         
+        //  TODO: Change depending on # of questions
+
         if (question1 == "" && question2 == "" && question3 == "" && question4 == "" && question5 == "" && question6 == "" && question7 == "" && question8 == "" && question9 == "" && question10 == "" && question11 == "") {
                    yesQuestionsLabel.text = "\n" + "None" + "\n"
         }
         
         else {
         
-        // Places previously loaded data onto screen
+            // Places previously loaded data onto screen
+            //  TODO: Change depending on # of questions
+
             if (question1 != "") {
                 yesQuestionsLabel.text = "\n" + question1 + "\n"
             }

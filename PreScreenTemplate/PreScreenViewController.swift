@@ -16,6 +16,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    
+    //  TODO: Change depending on # of questions
     @IBOutlet weak var question1Prompt: UILabel!
     @IBOutlet weak var question2Prompt: UILabel!
     @IBOutlet weak var question3Prompt: UILabel!
@@ -28,7 +30,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var question10Prompt: UILabel!
     @IBOutlet weak var question11Prompt: UILabel!
 
-    // INSERT ADDITIONAL QUESTIONS HERE
+    //  TODO: Change depending on # of questions
     
     @IBOutlet weak var question1Yes: UIButton!
     @IBOutlet weak var question1No: UIButton!
@@ -52,8 +54,6 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var question10No: UIButton!
     @IBOutlet weak var question11Yes: UIButton!
     @IBOutlet weak var question11No: UIButton!
-
-    // INSERT ADDITIONAL QUESTIONS HERE
     
     var ref: DatabaseReference!
     
@@ -315,8 +315,6 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
            UIApplication.shared.open(URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Fsymptoms.html")! as URL, options: [:], completionHandler: nil)
        }
     
-    // INSERT ADDITIONAL QUESTIONS HERE
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // Creates save default so app can save all information from questionnaire
@@ -327,6 +325,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             savedDefaults.set(true, forKey: "UserClear")
         }
         
+        //  TODO: Change depending on # of questions
+
         // Info for Not Clear Screen
         else if segue.identifier == "NotClearSegue" {
             if (question1Yes.isSelected)
@@ -382,6 +382,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             guard let userName = Auth.auth().currentUser?.displayName else {return}
             guard let userEmail = Auth.auth().currentUser?.email else {return}
             
+            //  TODO: Change depending on # of questions
             var q1Answer = "No"
             var q2Answer = "No"
             var q3Answer = "No"
@@ -394,6 +395,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             var q10Answer = "No"
             var q11Answer = "No"
             
+            //  TODO: Change depending on # of questions
             if (question1Yes.isSelected) {
                 q1Answer = "Yes"
             }
@@ -452,6 +454,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
                 root = userName + "; " + adjustedEmail
             }
             
+            // TODO: Change depending on # of questions, and set key dependign on what the question is
+            // Sending info under the person's own branch
             self.ref.child(root).child(currentDate).child("COVID Contact").setValue(q1Answer)
             self.ref.child(root).child(currentDate).child("Fever").setValue(q2Answer)
             self.ref.child(root).child(currentDate).child("Cough or Sore Throat").setValue(q3Answer)
@@ -465,6 +469,7 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
             self.ref.child(root).child(currentDate).child("Congestion or Runny Nose").setValue(q11Answer)
             self.ref.child(root).child(currentDate).child("Timestamp").setValue(timestamp)
             
+            // Sending info under the date
             self.ref.child(currentDate).child(root).child("COVID Contact").setValue(q1Answer)
             self.ref.child(currentDate).child(root).child("Fever").setValue(q2Answer)
             self.ref.child(currentDate).child(root).child("Cough or Sore Throat").setValue(q3Answer)
@@ -483,13 +488,12 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
      // Moves forward to all clear screen when "Submit" button is pressed
     @IBAction func submitButtonPressed(_ sender: Any) {
         
+        //  TODO: Change depending on # of questions
         // Checks if all questions have been answered
         if ((question1Yes.isSelected || question1No.isSelected) && (question2Yes.isSelected || question2No.isSelected) && (question3Yes.isSelected || question3No.isSelected) && (question4Yes.isSelected || question4No.isSelected) && (question5Yes.isSelected || question5No.isSelected) && (question6Yes.isSelected || question6No.isSelected) && (question7Yes.isSelected || question7No.isSelected) && (question8Yes.isSelected || question8No.isSelected) && (question9Yes.isSelected || question9No.isSelected) && (question10Yes.isSelected || question10No.isSelected) && (question11Yes.isSelected || question11No.isSelected))
         {
             // All questions answered
-            
-            // CLEAR: Qs 1-9 No
-            
+            //  TODO: Change depending on # of questions
             if (question1No.isSelected && question2No.isSelected && question3No.isSelected && question4No.isSelected && question5No.isSelected && question6No.isSelected && question7No.isSelected && question8No.isSelected && question9No.isSelected && question10No.isSelected && question11No.isSelected)
             {
                 self.performSegue(withIdentifier: "ClearSegue", sender: self)
@@ -512,7 +516,8 @@ class PreScreenViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "ViewInfo", sender: self)
     }
-    
+
+    // Can ignore this stuff
 //    // Closes keyboard when user touches outside of the keyboard
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        self.view.endEditing(true)
